@@ -1,0 +1,36 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/app.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<style type="text/css">
+	  .mobileShow {display: none;}
+
+	  /* Smartphone Portrait and Landscape */
+	  @media only screen
+	    and (min-device-width : 320px)
+	    and (max-device-width : 480px){
+	      .mobileShow {display: inline;}
+	  }
+	</style>
+	<style type="text/css">
+	  .mobileHide { display: inline; }
+
+	  /* Smartphone Portrait and Landscape */
+	  @media only screen
+	    and (min-device-width : 320px)
+	    and (max-device-width : 480px){
+	     .mobileHide { display: none;}
+	  }
+	</style>
+
+  {% include google-analytics.html %}
+</head>
