@@ -43,7 +43,7 @@ jobs:
           name: deploy jekyll site
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh -o StrictHostKeyChecking=no circleci@${BOSTONHACKS_IP_ADDR} 'rm -rf /var/www/museo/public'
-              scp -o StrictHostKeyChecking=no -r ~/museo/_site/ circleci@${BOSTONHACKS_IP_ADDR}:/var/www/museo/public
+              ssh -o StrictHostKeyChecking=no circleci@${BOSTONHACKS_IP_ADDR} 'rm -rf /var/www/bostonhacks/public'
+              scp -o StrictHostKeyChecking=no -r ~/museo/_site/ circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks/public
             fi
 
