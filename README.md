@@ -5,3 +5,4 @@ It is an ejected react starter project. Even though this is a static site, we're
 
 ## Setup
 
+Make sure you have recent versions of node and yarn
