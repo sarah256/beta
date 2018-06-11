@@ -1,16 +1,7 @@
-# BostonHacks Museum
-This is the museum website for BostonHacks.
+# BostonHacks Beta - Landing Page Fall 2018
+This is the landing page for BostonHacks (will live at bostonhacks.io).
 
-The museum site is made with Jekyll. To run it, navigate to the Jekyll website and follow their tutorial to get Jekyll and Bundler set up.
+It is an ejected react starter project. Even though this is a static site, we're doing this so that we can be modern and learn about some cool 22nd century shiz. Maybe someday we'll add features that actually necessitate all this crazy JS?
 
-GitHub Pages can server jekyll sites without any special work, so push any changes you want to go live into the gh-pages branch.
+## Setup
 
-## Using Jekyll
-This section is a work in progress... Needs better documentation.
-
-Markdown includes data for pages, and html files include layouts. Make sure to use relative_url for media.
-
-In order to start server, cd into the museo directory and run the command `bundle exec jekyll serve`.
-
-## Custom Bootstrap
-Google for how to compile bootstrap from source, then do that in the bootstrap directory here. Copy the bootstrap files into the assets folder when they're ready.
