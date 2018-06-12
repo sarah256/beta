@@ -1,15 +1,14 @@
 # Ruby CircleCI 2.0 configuration file
 #
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+# Check https://circleci.com/docs/2.0/ for more details
 #
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/ruby:2.4.3
+      - image: circleci/node:latest-browsers
 
-    working_directory: ~/museo
+    working_directory: ~/beta
 
     branches:
       only:
@@ -21,29 +20,30 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run:
           name: install dependencies
           command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            yarn install
 
       - save_cache:
           paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - ./node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: build jekyll site
-          command: bundle exec jekyll build
+          name: build landing page
+          command: |
+            yarn build
 
       - deploy:
-          name: deploy jekyll site
+          name: deploy landing page
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ssh -o StrictHostKeyChecking=no circleci@${BOSTONHACKS_IP_ADDR} 'rm -rf /var/www/bostonhacks/public'
-              scp -o StrictHostKeyChecking=no -r ~/museo/_site/ circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks/public
+              ssh -o StrictHostKeyChecking=no circleci@${BOSTONHACKS_IP_ADDR} 'rm -rf /var/www/bostonhacks/build'
+              scp -o StrictHostKeyChecking=no -r ~/beta/build circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks/
             fi
 
