@@ -44,6 +44,6 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               ssh -o StrictHostKeyChecking=no circleci@${BOSTONHACKS_IP_ADDR} 'rm -rf /var/www/bostonhacks/build'
-              scp -o StrictHostKeyChecking=no -r ~/beta/build circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks/
+              scp -o StrictHostKeyChecking=no -r ~/beta/build circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks
             fi
 
