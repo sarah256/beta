@@ -7,4 +7,22 @@ It is an ejected react starter project. Even though this is a static site, we're
 
 Make sure you have recent versions of node and yarn. You can install yarn with the node package manager (npm), which comes by default with installations of node.
 
-Side note: I like to use a node version manager so I can easily change between versions as necessary; there are several of these such as nvm and nodenv. 
+Side note: I like to use a node version manager so I can easily change between versions as necessary; there are several of these such as nvm and nodenv. Pick whatever works for you.
+
+To install dependencies, run the following:
+
+```
+  yarn install
+```
+
+and to start the project,
+
+```
+  yarn start
+```
+
+## Workflow
+
+Most of the stuff you'll be working on is in the src folder. The 
+
+
