@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
+import { AttendBox, SponsorBox } from "./components";
 
 class App extends Component {
   render() {
     return (
-      <Fragment className="App">
+      <div className="App">
         <div style={{ height: "100vh" }}>
           <h2 style={{ position: "fixed" }}>Header goes here!</h2>
 
@@ -13,11 +14,8 @@ class App extends Component {
             <h2>Boston University</h2>
           </div>
 
-          <h2>Attend</h2>
-          <p>Attend subtext goes here</p>
-          <p>Email field goes here</p>
-          <h2>Sponsor</h2>
-          <p>Sponsor subtext goes here</p>
+          <AttendBox />
+          <SponsorBox />
         </div>
 
         <div>
@@ -36,7 +34,7 @@ class App extends Component {
         </div>
 
         <h2>Footer goes here!</h2>
-      </Fragment>
+      </div>
     );
   }
 }
