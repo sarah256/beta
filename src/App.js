@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Header } from "./components/Header/Header";
 
-//  const tryThis = Header("apples").render();
 
 class App extends Component {
   render() {
