@@ -1,39 +1,92 @@
 import React, { Component } from "react";
 import { AttendBox, SponsorBox } from "./components";
+import { Header } from "./components/Header/Header";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div style={{ height: "100vh" }}>
-          <h2 style={{ position: "fixed" }}>Header goes here!</h2>
-
+          <h2 style={{ position: "fixed" }}> Site Header goes here!</h2>
           <div>
             <h1>BostonHacks!</h1>
-            <h2>Happening sometime in November, probably!</h2>
-            <h2>Boston University</h2>
+            <h2>
+              <Header
+                contentProp="November 10th-November 11th"
+                colorProp="#FFFFFF"
+                backgroundProp="#3dbecd"
+              />
+            </h2>
+            <h2>
+              <Header
+                contentProp="Boston University"
+                colorProp="#FFFFFF"
+                backgroundProp="#3dbecd"
+              />
+            </h2>
           </div>
-
-          <AttendBox />
-          <SponsorBox />
+          <div>
+            <h2>
+              <Header
+                contentProp="Attend"
+                colorProp="#9974AD"
+                backgroundProp="#FFFFFF"
+              />
+            </h2>
+            <AttendBox />
+            <h2>
+              <Header
+                contentProp="Sponsor"
+                colorProp="#dc4b6a"
+                backgroundProp="#FFFFFF"
+              />
+            </h2>
+            <SponsorBox />
+          </div>
         </div>
 
         <div>
-          <h2>Event schedule</h2>
+          <h2>
+            <Header
+              contentProp="Event Schedule"
+              colorProp="#EF833F"
+              backgroundProp="#FFFFFF"
+            />
+          </h2>
           <p>Schedule stuff here!</p>
         </div>
 
         <div>
-          <h2>Tracks and Workshops</h2>
+          <h2>
+            <Header
+              contentProp="Tracks and Workshops"
+              colorProp="#B7D98B"
+              backgroundProp="#3dbecd"
+            />
+          </h2>
           <p>Tracks and workshop stuff here!</p>
         </div>
 
         <div>
-          <h2>Frequently Asked Questions</h2>
+          <h2>
+            <Header
+              contentProp="Frequently"
+              colorProp="#3CBFCE"
+              backgroundProp="#FFFFFF"
+            />
+          </h2>
           <p>FAQ stuff here!</p>
         </div>
 
-        <h2>Footer goes here!</h2>
+        <div>
+          <h2>
+            <Header
+              contentProp="The Footer"
+              colorProp="#FFFFFF"
+              backgroundProp="#3dbecd"
+            />
+          </h2>
+        </div>
       </div>
     );
   }
