@@ -26,21 +26,7 @@ class App extends Component {
             </h2>
           </div>
           <div>
-            <h2>
-              <Header
-                contentProp="Attend"
-                colorProp="#9974AD"
-                backgroundProp="#FFFFFF"
-              />
-            </h2>
             <AttendBox />
-            <h2>
-              <Header
-                contentProp="Sponsor"
-                colorProp="#dc4b6a"
-                backgroundProp="#FFFFFF"
-              />
-            </h2>
             <SponsorBox />
           </div>
         </div>
