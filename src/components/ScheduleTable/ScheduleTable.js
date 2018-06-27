@@ -4,23 +4,24 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Table = styled.table`
-  tr div {
-    margin-bottom: 10px;
+  th {
+    text-align: left;
   }
-  tr:last-child div {
-    margin-bottom: 0px;
+  td,
+  th {
+    padding-bottom: 10px;
+  }
+  tr:last-child td {
+    padding-bottom: 0px;
   }
   border-collapse: collapse;
-  tr + tr {
-    td + td {
-      border-left: 2px solid grey;
-    }
+  td + td {
+    border-left: 2px solid grey;
   }
 `;
 
-const Title = styled.td`
+const Title = styled.th`
   padding-left: 10px;
-  font-weight: bold;
   font-size: 125%;
 `;
 
@@ -32,15 +33,15 @@ class ScheduleTable extends Component {
     });
     return (
       <Table>
-        <tbody>
+        <thead>
           <tr>
-            <td />
+            <th />
             <Title>
               <div> {this.props.title} </div>
             </Title>
           </tr>
-          {rows}
-        </tbody>
+        </thead>
+        <tbody>{rows}</tbody>
       </Table>
     );
   }
