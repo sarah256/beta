@@ -9,10 +9,6 @@ jobs:
       - image: circleci/node:latest-browsers
 
     working_directory: ~/beta
-
-    branches:
-      only:
-        - master
     
     steps:
       - checkout
