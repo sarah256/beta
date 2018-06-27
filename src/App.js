@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { EventSchedule, FAQSection } from "./components";
 
 class App extends Component {
   render() {
@@ -21,8 +22,7 @@ class App extends Component {
         </div>
 
         <div>
-          <h2>Event schedule</h2>
-          <p>Schedule stuff here!</p>
+          <EventSchedule />
         </div>
 
         <div>
@@ -31,8 +31,7 @@ class App extends Component {
         </div>
 
         <div>
-          <h2>Frequently Asked Questions</h2>
-          <p>FAQ stuff here!</p>
+          <FAQSection />
         </div>
 
         <h2>Footer goes here!</h2>
