@@ -56,7 +56,7 @@ class App extends Component {
         <div>
           <h2>
             <Header
-              contentProp="Frequently"
+              contentProp="Frequently Asked Questions"
               colorProp="#3CBFCE"
               backgroundProp="#FFFFFF"
             />
