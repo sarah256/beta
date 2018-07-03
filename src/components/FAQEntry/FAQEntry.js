@@ -3,9 +3,17 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const FAQEntryTitle = styled.div`
-  color: #00ffff;
   margin-bottom: 15px;
-  font-size: 125%;
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #3cbfce;
+`;
+
+const FAQAnswer = styled.div`
+  font-family: "Roboto Slab", serif;
+  font-size: 27px;
+  font-weight: 300;
 `;
 
 class FAQEntry extends Component {
@@ -13,7 +21,7 @@ class FAQEntry extends Component {
     return (
       <React.Fragment>
         <FAQEntryTitle> {this.props.title} </FAQEntryTitle>
-        <div> {this.props.body} </div>
+        <FAQAnswer> {this.props.body} </FAQAnswer>
       </React.Fragment>
     );
   }

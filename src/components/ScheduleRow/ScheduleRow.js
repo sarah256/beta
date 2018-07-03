@@ -4,14 +4,22 @@ import styled from "styled-components";
 
 const TimeCell = styled.td`
   text-align: right;
-  padding-right: 10px;
-  color: orange;
+  padding-right: 30px;
   text-transform: uppercase;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #ef833f;
 `;
 
 const EventCell = styled.td`
-  padding-left: 10px;
+  padding-left: 30px;
   text-transform: uppercase;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  font-weight: 300;
 `;
 
 class ScheduleRow extends Component {

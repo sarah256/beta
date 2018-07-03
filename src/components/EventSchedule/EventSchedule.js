@@ -30,9 +30,12 @@ const EventScheduleBody = styled.div`
 `;
 
 const EventScheduleTitle = styled.h2`
-  color: orange;
+  color: #ef833f;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
   position: relative;
-  left: 90px;
+  left: 210px;
 `;
 
 class EventSchedule extends Component {

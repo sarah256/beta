@@ -5,7 +5,7 @@ import styled from "styled-components";
 const FAQTable = styled.table`
   td,
   th {
-    width: 200px;
+    width: 30%;
     text-align: left;
     vertical-align: top;
   }
@@ -13,9 +13,23 @@ const FAQTable = styled.table`
     padding-bottom: 50px;
   }
   td {
-    padding-bottom: 30px;
-    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-right: 50px;
   }
+`;
+
+const FAQHeader = styled.div`
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #3cbfce;
+`;
+
+const FAQHeaderCopy = styled.div`
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  font-weight: 400;
 `;
 
 const FAQInfo = [
@@ -91,10 +105,11 @@ class FAQSection extends Component {
           <tr>
             <th />
             <th colSpan={2}>
-              <FAQEntry
-                title="Frequently Asked Questions"
-                body="The event is still a ways away, so check back closer to the hackathon for more information."
-              />
+              <FAQHeader> Frequently Asked Questions </FAQHeader>
+              <FAQHeaderCopy>
+                The event is still a ways away, so check back closer to the
+                hackathon for more information.
+              </FAQHeaderCopy>
             </th>
           </tr>
         </thead>

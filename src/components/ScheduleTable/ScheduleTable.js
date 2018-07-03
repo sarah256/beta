@@ -14,15 +14,13 @@ const Table = styled.table`
   tr:last-child td {
     padding-bottom: 0px;
   }
-  border-collapse: collapse;
-  td + td {
-    border-left: 2px solid grey;
-  }
 `;
 
 const Title = styled.th`
-  padding-left: 10px;
-  font-size: 125%;
+  padding-left: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-weight: 400;
 `;
 
 class ScheduleTable extends Component {
