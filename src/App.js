@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { AttendBox, SponsorBox } from "./components";
 import { Header } from "./components/Header/Header";
+import HeroText from "./components/HeroText";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div style={{ height: "100vh" }}>
+        <div className="headerbar Flair" style={{ height: "100vh" }}>
           <HeroText
             title="Boston"
             titleBold="Hacks"
@@ -14,12 +15,10 @@ class App extends Component {
             location="Boston University"
           />
         </div>
-          <div>
-            <AttendBox />
-            <SponsorBox />
-          </div>
+        <div>
+          <AttendBox />
+          <SponsorBox />
         </div>
-
         <div>
           <h2>
             <Header
