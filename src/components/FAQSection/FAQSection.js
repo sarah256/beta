@@ -1,33 +1,27 @@
 import React, { Component } from "react";
-import { FAQEntry } from "../";
 import styled from "styled-components";
+import { Flex, Box } from "grid-styled";
 
-const FAQTable = styled.table`
-  td,
-  th {
-    width: 30%;
-    text-align: left;
-    vertical-align: top;
-  }
-  th {
-    padding-bottom: 50px;
-  }
-  td {
-    padding-bottom: 50px;
-    padding-right: 50px;
-  }
-`;
-
-const FAQHeader = styled.div`
+const FAQEntryTitle = styled.div`
   margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 400;
   color: #3cbfce;
 `;
 
-const FAQHeaderCopy = styled.div`
+const FAQAnswer = styled.div`
   font-family: "Roboto Slab", serif;
+  font-size: 27px;
+  font-weight: 300;
+`;
+
+const FAQHeader = FAQEntryTitle.extend`
+  font-size: 48px;
+  font-weight: 500;
+`;
+
+const FAQHeaderCopy = FAQAnswer.extend`
   font-size: 32px;
   font-weight: 400;
 `;
@@ -91,30 +85,37 @@ class FAQSection extends Component {
     for (var i = 0; i < FAQInfo.length; i += 3) {
       var row = [];
       for (var j = 0; j < 3; j++) {
-        row.push(
-          <td key={i + j}>
-            <FAQEntry title={FAQInfo[i + j].title} body={FAQInfo[i + j].body} />
-          </td>
-        );
+        if (FAQInfo[i + j].title) {
+          row.push(
+            <Box p={3} width={[1, 1 / 2, 1 / 3]}>
+              <FAQEntryTitle> {FAQInfo[i + j].title} </FAQEntryTitle>
+              <FAQAnswer> {FAQInfo[i + j].body} </FAQAnswer>
+            </Box>
+          );
+        } else {
+          row.push(<Box width={[0, 0, 1 / 3]} />);
+        }
       }
-      rows.push(<tr key={i / 3}>{row}</tr>);
+      rows.push(
+        <Flex flexWrap="wrap" justifyContent="space-between" key={i / 3}>
+          {row}
+        </Flex>
+      );
     }
     return (
-      <FAQTable>
-        <thead>
-          <tr>
-            <th />
-            <th colSpan={2}>
-              <FAQHeader> Frequently Asked Questions </FAQHeader>
-              <FAQHeaderCopy>
-                The event is still a ways away, so check back closer to the
-                hackathon for more information.
-              </FAQHeaderCopy>
-            </th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </FAQTable>
+      <div>
+        <Flex justifyContent="space-between">
+          <Box width={[0, 1 / 3]} />
+          <Box p={3} width={[1, 2 / 3]}>
+            <FAQHeader> Frequently Asked Questions </FAQHeader>
+            <FAQHeaderCopy>
+              The event is still a ways away, so check back closer to the
+              hackathon for more information.
+            </FAQHeaderCopy>
+          </Box>
+        </Flex>
+        <div>{rows}</div>
+      </div>
     );
   }
 }

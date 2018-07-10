@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ScheduleTable } from "../";
 import styled from "styled-components";
+import { Flex, Box } from "grid-styled";
 
 const eventsSat = [
   { time: "9:30 AM", name: "registration" },
@@ -20,22 +21,13 @@ const eventsSun = [
   { time: "2:00 PM", name: "closing ceremony" }
 ];
 
-const EventScheduleBody = styled.div`
-  table {
-    display: inline;
-  }
-  table + table {
-    margin-left: 30px;
-  }
-`;
-
 const EventScheduleTitle = styled.h2`
   color: #ef833f;
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: 500;
   position: relative;
-  left: 210px;
+  margin-left: 15%;
 `;
 
 class EventSchedule extends Component {
@@ -43,10 +35,14 @@ class EventSchedule extends Component {
     return (
       <React.Fragment>
         <EventScheduleTitle> Event Schedule </EventScheduleTitle>
-        <EventScheduleBody>
-          <ScheduleTable events={eventsSat} title="Saturday" />
-          <ScheduleTable events={eventsSun} title="Sunday" />
-        </EventScheduleBody>
+        <Flex flexWrap="wrap" justifyContent="space-between">
+          <Box width={[1, 1 / 2]}>
+            <ScheduleTable events={eventsSat} title="Saturday" />
+          </Box>
+          <Box width={[1, 1 / 2]}>
+            <ScheduleTable events={eventsSun} title="Sunday" />
+          </Box>
+        </Flex>
       </React.Fragment>
     );
   }
