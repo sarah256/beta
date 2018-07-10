@@ -36,10 +36,10 @@ class EventSchedule extends Component {
       <React.Fragment>
         <EventScheduleTitle> Event Schedule </EventScheduleTitle>
         <Flex flexWrap="wrap" justifyContent="space-between">
-          <Box width={[1, 1 / 2]}>
+          <Box px={2} width={[1, 1, 1 / 2]}>
             <ScheduleTable events={eventsSat} title="Saturday" />
           </Box>
-          <Box width={[1, 1 / 2]}>
+          <Box px={2} width={[1, 1, 1 / 2]}>
             <ScheduleTable events={eventsSun} title="Sunday" />
           </Box>
         </Flex>
