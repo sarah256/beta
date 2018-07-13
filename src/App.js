@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { AttendBox, SponsorBox, EventSchedule, FAQSection } from "./components";
 import { Header } from "./components/Header/Header";
+import { TracksAndWorkshops } from "./components/TracksAndWorkshops/TracksAndWorkshops";
 
 class App extends Component {
   render() {
@@ -43,14 +44,7 @@ class App extends Component {
         </div>
 
         <div>
-          <h2>
-            <Header
-              contentProp="Tracks and Workshops"
-              colorProp="#B7D98B"
-              backgroundProp="#3dbecd"
-            />
-          </h2>
-          <p>Tracks and workshop stuff here!</p>
+          <TracksAndWorkshops />
         </div>
 
         <div>
