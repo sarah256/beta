@@ -2426,6 +2426,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
+
 eslint@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.1.0.tgz#2ed611f1ce163c0fb99e1e0cda5af8f662dff645"
@@ -6630,8 +6631,8 @@ styled-components@^3.3.2:
     supports-color "^3.2.3"
 
 "styled-system@>=1.1 || >=2.0", styled-system@^2.3.1:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-2.3.2.tgz#b5dbc7d197b41dd06b80b16e17b52503363a5aac"
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-2.3.6.tgz#a38c1ffa04a5c35adec46473984e463c48b16f7c"
   dependencies:
     prop-types "^15.6.0"
 
