@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { AttendBox, SponsorBox } from "./components";
+import {
+  AttendBox,
+  SponsorBox,
+  EventSchedule,
+  FAQSection,
+  TracksAndWorkshops
+} from "./components";
 import { Header } from "./components/Header/Header";
 import HeroText from "./components/HeroText";
 
@@ -27,18 +33,11 @@ class App extends Component {
               backgroundProp="#FFFFFF"
             />
           </h2>
-          <p>Schedule stuff here!</p>
+          <EventSchedule />
         </div>
 
         <div>
-          <h2>
-            <Header
-              contentProp="Tracks and Workshops"
-              colorProp="#B7D98B"
-              backgroundProp="#3dbecd"
-            />
-          </h2>
-          <p>Tracks and workshop stuff here!</p>
+          <TracksAndWorkshops />
         </div>
 
         <div>
@@ -49,7 +48,7 @@ class App extends Component {
               backgroundProp="#FFFFFF"
             />
           </h2>
-          <p>FAQ stuff here!</p>
+          <FAQSection />
         </div>
 
         <div>
