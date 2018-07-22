@@ -1,5 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,700');
+
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.Flair {
+  background-image: url("Waves/Header_Wave.svg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.headerbar {
+  width: 100%;
+  height: 10%;
+  /*background-color: #3dbecd;
+  background-image: url("Waves/Header_Wave.svg");*/
+  display: flex;
+  align-items: center;
+  padding-left: 9em;
+}
+
+.Title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+  display: inline;
+  line-height: 0%;
+  font-size: 4em;
+}
+
+.Bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline;
+  line-height: 0%;
+  font-size: 4em;
+}
+
+.Date {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+  line-height: 0%;
+  font-size: 1.5em;
+}
+
+.Location {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: #ffffff;
+  line-height: 10%;
+  font-size: 1.5em;
 }

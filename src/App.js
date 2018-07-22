@@ -1,37 +1,30 @@
 import React, { Component } from "react";
-import { AttendBox, SponsorBox, EventSchedule, FAQSection } from "./components";
+import {
+  AttendBox,
+  SponsorBox,
+  EventSchedule,
+  FAQSection,
+  TracksAndWorkshops
+} from "./components";
 import { Header } from "./components/Header/Header";
-import { TracksAndWorkshops } from "./components/TracksAndWorkshops/TracksAndWorkshops";
+import HeroText from "./components/HeroText";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div style={{ height: "100vh" }}>
-          <h2 style={{ position: "fixed" }}> Site Header goes here!</h2>
-          <div>
-            <h1>BostonHacks!</h1>
-            <h2>
-              <Header
-                contentProp="November 10th-November 11th"
-                colorProp="#FFFFFF"
-                backgroundProp="#3dbecd"
-              />
-            </h2>
-            <h2>
-              <Header
-                contentProp="Boston University"
-                colorProp="#FFFFFF"
-                backgroundProp="#3dbecd"
-              />
-            </h2>
-          </div>
-          <div>
-            <AttendBox />
-            <SponsorBox />
-          </div>
+        <div className="headerbar Flair" style={{ height: "100vh" }}>
+          <HeroText
+            title="Boston"
+            titleBold="Hacks"
+            date="November 10th - November 11th"
+            location="Boston University"
+          />
         </div>
-
+        <div>
+          <AttendBox />
+          <SponsorBox />
+        </div>
         <div>
           <h2>
             <Header

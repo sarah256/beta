@@ -7,6 +7,7 @@ import FAQEntry from "./FAQEntry";
 import Header from "./Header";
 import AttendBox from "./AttendBox";
 import SponsorBox from "./SponsorBox";
+import TracksAndWorkshops from "./TracksAndWorkshops";
 
 export {
   Container,
@@ -17,5 +18,6 @@ export {
   FAQEntry,
   Header,
   AttendBox,
-  SponsorBox
+  SponsorBox,
+  TracksAndWorkshops
 };
