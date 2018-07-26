@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-import grid1 from "./assets/Sq grid pink 1.png";
-import grid2 from "./assets/Dot Grid orng 2.png";
-import circle1 from "./assets/thin circle pink 2.png";
-import triangle1 from "./assets/orange triangle 1.png";
-import wave2 from "./assets/Wave 2.jpg";
-
 const Taw = styled.div`
   height: 100%;
   width: 100%;
@@ -16,7 +10,6 @@ const Taw = styled.div`
   background-height: auto;
   background-size: cover;
   background-color: rgb(61, 190, 205);
-  // background-image: url("${wave2}");
 `;
 
 const centeredImg = {
@@ -37,9 +30,7 @@ export class TracksAndWorkshops extends Component {
           <Grid fluid>
             <Row>
               <Col className="hidden-xs" sm={6}>
-                <div style={centeredImg}>
-                  <img src={grid1} />
-                </div>
+                <div style={centeredImg} />
               </Col>
               <Col xs={12} sm={6}>
                 <h3 style={{ color: "#B7D98B" }} align="right">
@@ -61,9 +52,7 @@ export class TracksAndWorkshops extends Component {
                 <h3 style={{ color: "#B7D98B" }}> Last year&apos;s tracks:</h3>
               </Col>
               <Col className="hidden-xs" sm={5}>
-                <div style={centeredImg}>
-                  <img src={circle1} />
-                </div>
+                <div style={centeredImg} />
               </Col>
             </Row>
 
@@ -95,14 +84,10 @@ export class TracksAndWorkshops extends Component {
 
             <Row>
               <Col className="hidden-xs" xs={3}>
-                <div style={centeredImg}>
-                  <img src={triangle1} />
-                </div>
+                <div style={centeredImg} />
               </Col>
               <Col className="hidden-xs" xsOffset={6} xs={3}>
-                <div style={centeredImg}>
-                  <img src={grid2} />
-                </div>
+                <div style={centeredImg} />
               </Col>
             </Row>
           </Grid>

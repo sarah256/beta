@@ -12,20 +12,19 @@ body {
 }
 
 .Flair {
-  background-image: url("Waves/Header_Wave.svg");
-  background-size: cover;
-  height: 100%;
-  width: 100%;
+  background:
+      url("assets/Waves/Header_Curve1.svg") no-repeat,
+      url("assets/Waves/Header_Curve2.svg") no-repeat;
+  display:flex;
+  background-size: contain;
 }
 
 .headerbar {
-  width: 100%;
-  height: 10%;
-  /*background-color: #3dbecd;
-  background-image: url("Waves/Header_Wave.svg");*/
-  display: flex;
+  margin-top: 20%;
+  margin-left: 12%;
+  margin-bottom: 25%;
   align-items: center;
-  padding-left: 9em;
+  display: flex;
 }
 
 .Title {
@@ -34,7 +33,7 @@ body {
   color: #ffffff;
   display: inline;
   line-height: 0%;
-  font-size: 4em;
+  font-size: 5vw;
 }
 
 .Bold {
@@ -43,7 +42,7 @@ body {
   color: #ffffff;
   display: inline;
   line-height: 0%;
-  font-size: 4em;
+  font-size: 5vw;
 }
 
 .Date {
@@ -51,7 +50,7 @@ body {
   font-weight: 100;
   color: #ffffff;
   line-height: 0%;
-  font-size: 1.5em;
+  font-size: 2vw;
 }
 
 .Location {
@@ -59,5 +58,5 @@ body {
   font-weight: 100;
   color: #ffffff;
   line-height: 10%;
-  font-size: 1.5em;
+  font-size: 2vw;
 }

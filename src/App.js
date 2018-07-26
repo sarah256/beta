@@ -13,13 +13,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="headerbar Flair" style={{ height: "100vh" }}>
-          <HeroText
-            title="Boston"
-            titleBold="Hacks"
-            date="November 10th - November 11th"
-            location="Boston University"
-          />
+        <div className="Flair">
+          <div className="headerbar">
+            <HeroText
+              title="Boston"
+              titleBold="Hacks"
+              date="November 10th - November 11th"
+              location="Boston University"
+            />
+          </div>
         </div>
         <div>
           <AttendBox />
