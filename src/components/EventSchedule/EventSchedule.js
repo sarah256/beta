@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ScheduleTable } from "../";
 import styled from "styled-components";
-import { Flex, Box } from "grid-styled";
+import { Grid, Row, Col } from "react-flexbox-grid";
 
 import gridGreen1 from "./assets/dot grid green 1.svg";
 import circleBlue1 from "./assets/Thin circle blue 1.svg";
@@ -27,39 +27,37 @@ const eventsSun = [
 const EventScheduleTitle = styled.h2`
   color: #ef833f;
   font-family: "Roboto", sans-serif;
-  font-size: 48px;
+  font-size: 33px;
   font-weight: 500;
   position: relative;
-  margin-left: 15%;
+  margin-left: 17%;
 `;
 
 class EventSchedule extends Component {
   render() {
     return (
       <React.Fragment>
-        <Flex>
-          <Flex
-            width={[0, 1 / 20]}
-            flexDirection="column"
-            justifyContent="center"
-          >
-            <img src={circleBlue1} />
-          </Flex>
-          <Box width={[1, 85 / 100]}>
-            <EventScheduleTitle> Event Schedule </EventScheduleTitle>
-            <Flex flexWrap="wrap" justifyContent="space-between">
-              <Box px={2} width={[1, 1, 1 / 2]}>
-                <ScheduleTable events={eventsSat} title="Saturday" />
-              </Box>
-              <Box px={2} width={[1, 1, 1 / 2]}>
-                <ScheduleTable events={eventsSun} title="Sunday" />
-              </Box>
-            </Flex>
-          </Box>
-          <Flex width={[0, 1 / 10]} alignItems="center" justifyContent="center">
-            <img src={gridGreen1} />
-          </Flex>
-        </Flex>
+        <Grid fluid>
+          <Row middle="xs">
+            <Col className="hidden-md hidden-sm hidden-xs" lg={1}>
+              <img src={circleBlue1} />
+            </Col>
+            <Col md={11} lg={9}>
+              <EventScheduleTitle> Event Schedule </EventScheduleTitle>
+              <Row>
+                <Col md={12} lg={6}>
+                  <ScheduleTable events={eventsSat} title="Saturday" />
+                </Col>
+                <Col md={12} lg={6}>
+                  <ScheduleTable events={eventsSun} title="Sunday" />
+                </Col>
+              </Row>
+            </Col>
+            <Col className="hidden-sm hidden-xs" md={1} sm={2}>
+              <img src={gridGreen1} />
+            </Col>
+          </Row>
+        </Grid>
       </React.Fragment>
     );
   }

@@ -19,7 +19,7 @@ const Table = styled.table`
 const Title = styled.th`
   padding-left: 30px;
   font-family: "Roboto", sans-serif;
-  font-size: 44px;
+  font-size: 30px;
   font-weight: 400;
 `;
 

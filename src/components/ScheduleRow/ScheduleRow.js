@@ -8,9 +8,9 @@ const TimeCell = styled.td`
   text-transform: uppercase;
 
   font-family: "Roboto", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 400;
-  color: #ef833f;
+  color: #ef9b75;
 `;
 
 const EventCell = styled.td`
@@ -18,7 +18,7 @@ const EventCell = styled.td`
   text-transform: uppercase;
 
   font-family: "Roboto Slab", serif;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 300;
 `;
 
