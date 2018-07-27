@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-import grid1 from "./assets/Sq grid pink 1.png";
-import grid2 from "./assets/Dot Grid orng 2.png";
-import circle1 from "./assets/thin circle pink 2.png";
-import triangle1 from "./assets/orange triangle 1.png";
-import wave2 from "./assets/Wave 2.jpg";
+import grid1 from "../../assets/Grids/Sq_grid_Blue.svg";
+import grid2 from "../../assets/Grids/Dot_Grid_Orng1.svg";
+import circle1 from "../../assets/Circles/.Circle_pink.svg";
+import triangle1 from "../../assets/Triangles/Tri_Orng1.svg";
+import wave2 from "../../assets/Waves/Mid_Curve1.svg";
 
 const Taw = styled.div`
   height: 100%;
