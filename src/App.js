@@ -4,7 +4,8 @@ import {
   SponsorBox,
   EventSchedule,
   FAQSection,
-  TracksAndWorkshops
+  TracksAndWorkshops,
+  Footer
 } from "./components";
 import { Header } from "./components/Header/Header";
 import HeroText from "./components/HeroText";
@@ -52,13 +53,7 @@ class App extends Component {
         </div>
 
         <div>
-          <h2>
-            <Header
-              contentProp="The Footer"
-              colorProp="#FFFFFF"
-              backgroundProp="#3dbecd"
-            />
-          </h2>
+          <Footer />
         </div>
       </div>
     );

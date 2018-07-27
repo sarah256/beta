@@ -8,6 +8,7 @@ import Header from "./Header";
 import AttendBox from "./AttendBox";
 import SponsorBox from "./SponsorBox";
 import TracksAndWorkshops from "./TracksAndWorkshops";
+import Footer from "./Footer";
 
 export {
   Container,
@@ -19,5 +20,6 @@ export {
   Header,
   AttendBox,
   SponsorBox,
-  TracksAndWorkshops
+  TracksAndWorkshops,
+  Footer
 };
