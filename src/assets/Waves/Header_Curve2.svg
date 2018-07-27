@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="665px" viewBox="0 0 1440 665" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Header Curve 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Desktop-HD" fill="#383469">
+            <path d="M-129,810 C-129,800.538053 -105.785436,779.12893 -100.293673,772.436884 C3.39895058,646.069737 138.744921,520.122819 313.785265,545.517347 C378.303312,554.879884 441.704926,574.57194 506.896448,574.657793 C587.519147,574.761721 665.8457,544.518736 734.151482,501.705008 C831.864185,440.459913 905.63913,352.631899 1008.5046,299.176869 C1185.38457,207.264041 1423.56437,302.150108 1568,138.070731 L1568,-81 L-129,-81 L-129,810 Z" id="Header-Curve-2"></path>
+        </g>
+    </g>
+</svg>
