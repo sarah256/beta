@@ -19,6 +19,19 @@ body {
   background-size: contain;
 }
 
+.footerFlair {
+  background: url("assets/Waves/FooterCurve.svg") no-repeat;
+  display:flex;
+  background-size: cover;
+}
+
+.footer {
+  margin-top: 7%;
+  margin-bottom: 50%;
+  width: 100%;
+}
+
+
 .headerbar {
   margin-top: 20%;
   margin-left: 12%;

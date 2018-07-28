@@ -54,8 +54,10 @@ class App extends Component {
           <FAQSection />
         </div>
 
-        <div>
-          <Footer />
+        <div className="footerFlair">
+          <div className="footer">
+            <Footer />
+          </div>
         </div>
       </div>
     );

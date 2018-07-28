@@ -4,7 +4,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 
 import grid1 from "../../assets/Grids/Sq_grid_Blue.svg";
 import grid2 from "../../assets/Grids/Dot_Grid_Orng1.svg";
-import circle1 from "../../assets/Circles/.Circle_pink.svg";
+import circle1 from "../../assets/Circles/Circle_pink.svg";
 import triangle1 from "../../assets/Triangles/Tri_Orng1.svg";
 import wave2 from "../../assets/Waves/Mid_Curve1.svg";
 
