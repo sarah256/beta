@@ -1,21 +1,14 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
-
-const Div = styled.div`
-  height: 100%;
-  width: 100%;
-  font-family: .SFNSDisplay;
-`;
 
 export class Header extends Component {
   render() {
     return (
-      <Div style={{ background: this.props.backgroundProp }}>
+      <div style={{ background: this.props.backgroundProp }}>
         <h3 style={{ color: this.props.colorProp }}>
           {this.props.contentProp}
         </h3>
-      </Div>
+      </div>
     );
   }
 }
@@ -29,7 +22,7 @@ Header.propTypes = {
 Header.defaultProps = {
   contentProp: "A header should go here",
   colorProp: "#dc4b6a",
-  backgroundProp: "#3dbecd"
+  backgroundProp: "#fff"
 };
 
 export default Header;

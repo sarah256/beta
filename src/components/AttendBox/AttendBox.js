@@ -1,11 +1,16 @@
 import React, { Component, Fragment } from "react";
 import Header from "../Header";
 
+const InvalidEmailText = () => (
+  <p>Oh no! We couldn&#39;t recognize that email. Typo?</p>
+);
+
 class AttendBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userEmail: ""
+      userEmail: "",
+      showInvalidEmailText: false
     };
   }
 
@@ -14,20 +19,25 @@ class AttendBox extends Component {
   };
 
   handleClick = e => {
-    // TODO: Actually add users to the mailing list
-    console.log("The email ", this.state.userEmail, " was just entered!");
     e.preventDefault();
-    this.setState({ userEmail: "" });
+
+    // Regex magic, checks whether the user entered a valid email format
+    let isValidEmail = this.state.userEmail.match(
+      /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
+    );
+
+    if (isValidEmail) {
+      // TODO: Add users to the mailing list here
+      this.setState({ userEmail: "", showInvalidEmailText: false });
+    } else {
+      this.setState({ showInvalidEmailText: true });
+    }
   };
 
   render() {
     return (
       <Fragment>
-        <Header
-          contentProp="Attend"
-          colorProp="#9974AD"
-          backgroundProp="#FFFFFF"
-        />
+        <Header contentProp="Attend" colorProp="#9974AD" />
         <p>
           Thanks for the interest! Leave your email address below or follow us
           on social media to get notified when there is more information and
@@ -40,6 +50,7 @@ class AttendBox extends Component {
             placeholder="Join our mailing list!"
           />
           <button onClick={this.handleClick}>Do it</button>
+          {this.state.showInvalidEmailText ? <InvalidEmailText /> : null}
         </div>
       </Fragment>
     );
