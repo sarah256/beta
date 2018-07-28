@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Div = styled.div`
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 400;
   margin: 0;
 `;

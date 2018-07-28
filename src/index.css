@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,700');
 
 html {
   height: 100%;
@@ -15,6 +15,26 @@ p {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 18px;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  padding: 0.7em 1.4em 0.7em 1.4em;
+  border-radius: 14px;
+  vertical-align: center;
+  cursor: pointer;
+}
+
+input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.4em;
+  margin-right: 10px;
+  border-radius: 14px;
 }
 
 .Flair {

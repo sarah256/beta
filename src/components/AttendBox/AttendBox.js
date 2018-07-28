@@ -2,7 +2,9 @@ import React, { Component, Fragment } from "react";
 import Header from "../Header";
 
 const InvalidEmailText = () => (
-  <p>Oh no! We couldn&#39;t recognize that email. Typo?</p>
+  <p style={{ color: "red" }}>
+    Oh no! We couldn&#39;t recognize that email. Typo?
+  </p>
 );
 
 class AttendBox extends Component {
@@ -47,9 +49,14 @@ class AttendBox extends Component {
           <input
             value={this.state.userEmail}
             onChange={this.handleChange}
-            placeholder="Join our mailing list!"
+            placeholder="hacker@anyschool.edu"
           />
-          <button onClick={this.handleClick}>Do it</button>
+          <button
+            style={{ backgroundColor: "#3cbfce" }}
+            onClick={this.handleClick}
+          >
+            Subscribe
+          </button>
           {this.state.showInvalidEmailText ? <InvalidEmailText /> : null}
         </div>
       </Fragment>
