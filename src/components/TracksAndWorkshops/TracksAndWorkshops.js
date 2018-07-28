@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../Header";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
@@ -33,9 +34,11 @@ export class TracksAndWorkshops extends Component {
                 <div style={centeredImg} />
               </Col>
               <Col xs={12} sm={6}>
-                <h3 style={{ color: "#B7D98B" }} align="right">
-                  Tracks and Workshops
-                </h3>
+                <Header
+                  contentProp={"Tracks and Workshops"}
+                  colorProp={"#b7d98b"}
+                  backgroundProp={"#3dbecd"}
+                />
                 <p align="right">
                   Tracks are optional specialized topics or technologies you can
                   aim your project at. We&apos;ll have sponsors, workshops, and
@@ -49,7 +52,11 @@ export class TracksAndWorkshops extends Component {
 
             <Row>
               <Col smOffset={1} sm={5}>
-                <h3 style={{ color: "#B7D98B" }}> Last year&apos;s tracks:</h3>
+                <Header
+                  contentProp={"Last year's tracks:"}
+                  colorProp={"#b7d98b"}
+                  backgroundProp={"#3dbecd"}
+                />
               </Col>
               <Col className="hidden-xs" sm={5}>
                 <div style={centeredImg} />

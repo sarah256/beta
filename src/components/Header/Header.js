@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const Div = styled.h2`
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+`;
 
 export class Header extends Component {
   render() {
     return (
-      <div style={{ background: this.props.backgroundProp }}>
+      <Div style={{ background: this.props.backgroundProp }}>
         <h3 style={{ color: this.props.colorProp }}>
           {this.props.contentProp}
         </h3>
-      </div>
+      </Div>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../Header";
 import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
 
@@ -14,11 +15,6 @@ const FAQAnswer = styled.div`
   font-family: "Roboto Slab", serif;
   font-size: 27px;
   font-weight: 300;
-`;
-
-const FAQHeader = FAQEntryTitle.extend`
-  font-size: 48px;
-  font-weight: 500;
 `;
 
 const FAQHeaderCopy = FAQAnswer.extend`
@@ -107,7 +103,10 @@ class FAQSection extends Component {
         <Flex justifyContent="space-between">
           <Box width={[0, 1 / 3]} />
           <Box p={3} width={[1, 2 / 3]}>
-            <FAQHeader> Frequently Asked Questions </FAQHeader>
+            <Header
+              contentProp={"Frequently Asked Questions"}
+              colorProp={"#3cbfce"}
+            />
             <FAQHeaderCopy>
               The event is still a ways away, so check back closer to the
               hackathon for more information.

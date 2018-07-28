@@ -36,41 +36,18 @@ class App extends Component {
             </Box>
             <Box width={[0, 1 / 4, 1 / 4]} />
           </Flex>
-          <div>
-            <h2>
-              <Header
-                contentProp="Event Schedule"
-                colorProp="#EF833F"
-                backgroundProp="#FFFFFF"
-              />
-            </h2>
-            <EventSchedule />
-          </div>
 
-          <div>
-            <TracksAndWorkshops />
-          </div>
+          <EventSchedule />
 
-          <div>
-            <h2>
-              <Header
-                contentProp="Frequently Asked Questions"
-                colorProp="#3CBFCE"
-                backgroundProp="#FFFFFF"
-              />
-            </h2>
-            <FAQSection />
-          </div>
+          <TracksAndWorkshops />
 
-          <div>
-            <h2>
-              <Header
-                contentProp="The Footer"
-                colorProp="#FFFFFF"
-                backgroundProp="#3dbecd"
-              />
-            </h2>
-          </div>
+          <FAQSection />
+
+          <Header
+            contentProp="The Footer"
+            colorProp="#FFFFFF"
+            backgroundProp="#3dbecd"
+          />
         </div>
       </div>
     );
