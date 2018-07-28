@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Flex, Box } from "grid-styled";
+
 import {
-  AttendBox,
-  SponsorBox,
+  AttendAndSponsorBoxes,
   EventSchedule,
   FAQSection,
   TracksAndWorkshops
@@ -25,17 +24,8 @@ class App extends Component {
               />
             </div>
           </div>
-          <Flex className="attendSponsorFlex">
-            <Box width={[0, 1 / 4, 1 / 4]} />
-            <Box width={[1, 1 / 4, 1 / 5]}>
-              <AttendBox />
-            </Box>
-            <Box width={[0, 0, 1 / 10]} />
-            <Box width={[1, 1 / 4, 1 / 5]}>
-              <SponsorBox />
-            </Box>
-            <Box width={[0, 1 / 4, 1 / 4]} />
-          </Flex>
+
+          <AttendAndSponsorBoxes />
 
           <EventSchedule />
 

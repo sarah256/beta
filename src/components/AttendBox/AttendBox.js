@@ -37,7 +37,7 @@ class AttendBox extends Component {
   render() {
     return (
       <Fragment>
-        <Header contentProp="Attend" colorProp="#9974AD" />
+        <Header contentProp="Attend" colorProp="#3cbfce" />
         <p>
           Thanks for the interest! Leave your email address below or follow us
           on social media to get notified when there is more information and
