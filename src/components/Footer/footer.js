@@ -5,11 +5,12 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 import circle1 from "../../assets/Circles/Circle_Green.svg";
 import zig from "../../assets/ZigZags/Line_Orng2.svg";
 
-import logoFooter from "../../assets/Logos/Logo-Small_footer.svg";
+// import logoFooter from "../../assets/Logos/Logo-Small_footer.svg";
 
 import twillio from "../../assets/SponsorLogos/Twillio/twillioRed.png";
 import google from "../../assets/SponsorLogos/Google/google.png";
 import giphy from "../../assets/SponsorLogos/Giphy/giphyIcon.png";
+import liberty from "../../assets/SponsorLogos/Liberty/libertyLogo.png";
 
 const Text = styled.div`
   font-family: "Roboto", sans-serif;
@@ -17,58 +18,60 @@ const Text = styled.div`
   font-size: 2vw;
   color: #ffffff;
   display: flex;
+  margin-bottom: 10%;
 `;
+
+const Logo = {
+  height: "5vw",
+  padding: "0 7vw 0 7vw"
+};
+
+const centerTable = {
+  display: "flex",
+  justifyContent: "center"
+};
 
 export class Footer extends Component {
   render() {
     return (
       // <Wave2>
       // <Wave1>
-      <div>
+      <div style={{ paddingTop: "12vw" }}>
         <Grid fluid>
           <Row style={{ marginBottom: "5vw" }}>
             <Col className="hidden-xs" xs={6}>
-              <div style={{ marginLeft: "-3vw" }}>
+              <div style={{ marginLeft: "0vw" }}>
                 <img src={circle1} />
               </div>
             </Col>
             <Col className="hidden-xs" xs={6}>
-              <div style={{ marginLeft: "150px" }}>
+              <div style={{ marginLeft: "20vw" }}>
                 <img src={zig} />
               </div>
             </Col>
           </Row>
-          <Row style={{ display: "flex", justifyContent: "center" }}>
-            <Text>Thank you to our sponsors</Text>
+          <Row style={centerTable}>
+            <Text>Thank you to our sponsors!</Text>
           </Row>
 
-          <Row style={{ display: "flex", justifyContent: "center" }}>
+          <Row>
             <Col xs={4}>
-              <img
-                style={{ height: "5vw", padding: "0 9vw 0 9vw" }}
-                src={twillio}
-              />
+              <img style={Logo} src={twillio} />
             </Col>
             <Col xs={4}>
-              <img
-                style={{ height: "5vw", padding: "0 9vw 0 9vw" }}
-                src={google}
-              />
+              <img style={Logo} src={google} />
             </Col>
             <Col xs={4}>
-              <img
-                style={{ height: "5vw", padding: "0 9vw 0 9vw" }}
-                src={giphy}
-              />
+              <img style={Logo} src={giphy} />
+            </Col>
+          </Row>
+
+          <Row style={centerTable}>
+            <Col xs={4}>
+              <img style={{ height: "14vw" }} src={liberty} />
             </Col>
           </Row>
         </Grid>
-        <div style={{ display: "flex", alignItems: "flex-end" }}>
-          <Text>
-            <img src={logoFooter} />
-            <p>Back to Top</p>
-          </Text>
-        </div>
       </div>
       // </Wave1>
       // </Wave2>

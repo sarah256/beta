@@ -9,6 +9,7 @@ import {
 } from "./components";
 import { Header } from "./components/Header/Header";
 import HeroText from "./components/HeroText";
+import { FooterBar } from "./components/FooterBar/footerbar";
 
 class App extends Component {
   render() {
@@ -51,6 +52,10 @@ class App extends Component {
           <div className="footer">
             <Footer />
           </div>
+        </div>
+
+        <div>
+          <FooterBar />
         </div>
       </div>
     );

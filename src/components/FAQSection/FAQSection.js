@@ -132,7 +132,7 @@ class FAQSection extends Component {
             </Col>
           </Row>
 
-          <Row style={{ marginRight: "-500px" }}>
+          <Row className="hidden-xs" style={{ marginRight: "-500px" }}>
             <img src={redTrian} />
           </Row>
 
