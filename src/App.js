@@ -44,13 +44,6 @@ class App extends Component {
         </div>
 
         <div>
-          <h2>
-            <Header
-              contentProp="Frequently Asked Questions"
-              colorProp="#3CBFCE"
-              backgroundProp="#FFFFFF"
-            />
-          </h2>
           <FAQSection />
         </div>
 

@@ -1,35 +1,22 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
-// import wave1 from "../../assets/Waves/Footer_Curve1.svg";
-// import wave2 from "../../assets/Waves/Footer_Curve2.svg";
-import circle1 from "../../assets/Circles/Circle_pink.svg";
-
-import logoFooter from "../../assets/Logos/Logo-Small_footer.svg";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-/* const Wave2 = styled.div`
-  background: url(${wave2}) no-repeat bottom left;
-  background-size: contain;
-  display: flex;
-`; 
+import circle1 from "../../assets/Circles/Circle_Green.svg";
+import zig from "../../assets/ZigZags/Line_Orng2.svg";
 
-const Wave1 = styled.div`
-  background: url(${wave1}) no-repeat bottom left;
-  background-size: contain;
-  display: flex;
-`; */
+import logoFooter from "../../assets/Logos/Logo-Small_footer.svg";
 
-const parentFlex = {
-  display: "flex",
-  justifyContent: "center"
-};
+import twillio from "../../assets/SponsorLogos/Twillio/twillioRed.png";
+import google from "../../assets/SponsorLogos/Google/google.png";
+import giphy from "../../assets/SponsorLogos/Giphy/giphyIcon.png";
 
 const Text = styled.div`
-  font-size: 3vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 2vw;
   color: #ffffff;
   display: flex;
-  margin-right: 20%;
 `;
 
 export class Footer extends Component {
@@ -37,43 +24,51 @@ export class Footer extends Component {
     return (
       // <Wave2>
       // <Wave1>
-      <div style={parentFlex}>
+      <div>
         <Grid fluid>
-          <Row>
-            <Col xs={6}>
-              <div>
+          <Row style={{ marginBottom: "5vw" }}>
+            <Col className="hidden-xs" xs={6}>
+              <div style={{ marginLeft: "-3vw" }}>
                 <img src={circle1} />
               </div>
             </Col>
-
-            <Col xs={6}>
-              <p>Design two</p>
+            <Col className="hidden-xs" xs={6}>
+              <div style={{ marginLeft: "150px" }}>
+                <img src={zig} />
+              </div>
             </Col>
+          </Row>
+          <Row style={{ display: "flex", justifyContent: "center" }}>
+            <Text>Thank you to our sponsors</Text>
           </Row>
 
           <Row style={{ display: "flex", justifyContent: "center" }}>
-            <p>Thank you to our sponsors</p>
-          </Row>
-
-          <Row>
-            <Col>
-              <p>Sponsor1</p>
+            <Col xs={4}>
+              <img
+                style={{ height: "5vw", padding: "0 9vw 0 9vw" }}
+                src={twillio}
+              />
             </Col>
-            <Col>
-              <p>Sponsor2</p>
+            <Col xs={4}>
+              <img
+                style={{ height: "5vw", padding: "0 9vw 0 9vw" }}
+                src={google}
+              />
             </Col>
-            <Col>
-              <p>Sponosor3</p>
+            <Col xs={4}>
+              <img
+                style={{ height: "5vw", padding: "0 9vw 0 9vw" }}
+                src={giphy}
+              />
             </Col>
-          </Row>
-
-          <Row>
-            <Text>
-              <img src={logoFooter} />
-              <p>Back to Top</p>
-            </Text>
           </Row>
         </Grid>
+        <div style={{ display: "flex", alignItems: "flex-end" }}>
+          <Text>
+            <img src={logoFooter} />
+            <p>Back to Top</p>
+          </Text>
+        </div>
       </div>
       // </Wave1>
       // </Wave2>
