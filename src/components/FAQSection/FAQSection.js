@@ -87,13 +87,13 @@ class FAQSection extends Component {
       for (var j = 0; j < 3; j++) {
         if (FAQInfo[i + j].title) {
           row.push(
-            <Box p={3} width={[1, 1 / 2, 1 / 3]}>
+            <Box key={i + j} p={3} width={[1, 1 / 2, 1 / 3]}>
               <FAQEntryTitle> {FAQInfo[i + j].title} </FAQEntryTitle>
               <FAQAnswer> {FAQInfo[i + j].body} </FAQAnswer>
             </Box>
           );
         } else {
-          row.push(<Box width={[0, 0, 1 / 3]} />);
+          row.push(<Box key={i + j} width={[0, 0, 1 / 3]} />);
         }
       }
       rows.push(
