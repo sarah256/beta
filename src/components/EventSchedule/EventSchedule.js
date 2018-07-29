@@ -3,8 +3,9 @@ import { ScheduleTable } from "../";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-import gridGreen1 from "./assets/dot grid green 1.svg";
+import gridBlue from "./../../assets/Grids/Dot_Grid_Blue.svg";
 import circleBlue1 from "./assets/Thin circle blue 1.svg";
+import zigzag from "./../../assets/ZigZags/Line_Green2.svg";
 
 const eventsSat = [
   { time: "9:30 AM", name: "registration" },
@@ -33,13 +34,21 @@ const EventScheduleTitle = styled.h2`
   margin-left: 17%;
 `;
 
+const GreenGrid = styled.img`
+  margin-top: 100%;
+`;
+
 class EventSchedule extends Component {
   render() {
     return (
       <React.Fragment>
-        <Grid fluid>
-          <Row middle="xs">
-            <Col className="hidden-md hidden-sm hidden-xs" lg={1}>
+        <Grid fluid style={{ padding: "0" }}>
+          <Row>
+            <Col
+              className="hidden-md hidden-sm hidden-xs"
+              lg={1}
+              style={{ display: "flex" }}
+            >
               <img src={circleBlue1} />
             </Col>
             <Col md={11} lg={9}>
@@ -53,8 +62,9 @@ class EventSchedule extends Component {
                 </Col>
               </Row>
             </Col>
-            <Col className="hidden-sm hidden-xs" md={1} sm={2}>
-              <img src={gridGreen1} />
+            <Col className="hidden-sm hidden-xs" md={1} lg={2}>
+              <img src={zigzag} align="right" />
+              <GreenGrid src={gridBlue} />
             </Col>
           </Row>
         </Grid>
