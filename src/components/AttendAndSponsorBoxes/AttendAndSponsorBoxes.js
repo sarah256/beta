@@ -9,15 +9,15 @@ class AttendAndSponsorBoxes extends Component {
   render() {
     return (
       <Flex className="attendSponsorFlex">
-        <Box width={[0, 1 / 4, 1 / 5]} />
-        <Box width={[1, 1 / 4, 5 / 20]}>
+        <Box width={[0, 1 / 11, 1 / 5]} />
+        <Box width={[1, 4 / 11, 5 / 20]}>
           <AttendBox />
         </Box>
-        <Box width={[0, 0, 1 / 10]} />
-        <Box width={[1, 1 / 4, 5 / 20]}>
+        <Box width={[0, 1 / 11, 1 / 10]} />
+        <Box width={[1, 4 / 11, 5 / 20]}>
           <SponsorBox />
         </Box>
-        <Box width={[0, 1 / 4, 1 / 5]} />
+        <Box width={[0, 1 / 11, 1 / 5]} />
       </Flex>
     );
   }

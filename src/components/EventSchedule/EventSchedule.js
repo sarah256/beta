@@ -22,15 +22,6 @@ const eventsSun = [
   { time: "2:00 PM", name: "closing ceremony" }
 ];
 
-// const EventScheduleTitle = styled.h2`
-//   color: #ef833f;
-//   font-family: "Roboto", sans-serif;
-//   font-size: 48px;
-//   font-weight: 500;
-//   position: relative;
-//   margin-left: 15%;
-// `;
-
 class EventSchedule extends Component {
   render() {
     return (
