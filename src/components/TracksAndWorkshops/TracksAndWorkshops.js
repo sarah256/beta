@@ -58,10 +58,10 @@ export class TracksAndWorkshops extends Component {
         <Grid fluid>
           <Row1>
             <Row>
-              <Col sm={12} md={7} align="center">
+              <Col md={12} lg={7} align="center">
                 <img src={gridBlue} />
               </Col>
-              <Col sm={12} md={5} align="right">
+              <Col md={12} lg={5} align="right">
                 <TracksTitle> Tracks and Workshops </TracksTitle>
                 <TracksBody>
                   Tracks are optional specialized topics or technologies you can
@@ -75,16 +75,23 @@ export class TracksAndWorkshops extends Component {
             </Row>
           </Row1>
           <Row2>
-            <LastYear> Last year&apos;s tracks: </LastYear>
             <Row>
-              <Col sm={12} md={3}>
+              <Col md={6} lg={9}>
+                <LastYear> Last year&apos;s tracks: </LastYear>
+              </Col>
+              <Col md={6} lg={3} align="center">
+                <img src={circleBlue} />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12} lg={3}>
                 <TrackName> Web and mobile </TrackName>
                 <TracksCopy>
                   Led by <b> OpenWeb BU </b>, hackers learned how to make a
                   website or mobile app from the ground up.
                 </TracksCopy>
               </Col>
-              <Col sm={12} md={3}>
+              <Col md={12} lg={3}>
                 <TrackName> Machine Learning </TrackName>
                 <TracksCopy>
                   Led by <b> BU’s Machine Intelligence Community </b>, hackers
@@ -92,16 +99,13 @@ export class TracksAndWorkshops extends Component {
                   and moved on to more advanced topics.
                 </TracksCopy>
               </Col>
-              <Col sm={12} md={3}>
+              <Col md={12} lg={3}>
                 <TrackName> Virtual Reality </TrackName>
                 <TracksCopy>
                   Led by <b> BU AR/VR </b>, hackers got a jumpstart into
                   creating in 3D. Then they created hacks on the Oculus Rifts we
                   made available to them.
                 </TracksCopy>
-              </Col>
-              <Col sm={12} md={3} align="center">
-                <img src={circleBlue} />
               </Col>
             </Row>
           </Row2>

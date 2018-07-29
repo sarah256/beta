@@ -64,7 +64,7 @@ body {
 .TracksAndWorkshops {
   background:
       url("assets/Waves/Mid_Curve1.svg") no-repeat,
-      url("assets/Waves/Mid_Curve2.svg") no-repeat;
+      url("assets/Waves/Mid_Curve2.svg") repeat;
   display:flex;
-  background-size: contain;
+  background-size: contain, cover;
 }

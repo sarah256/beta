@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
 import gridBlue from "./../../assets/Grids/Dot_Grid_Blue.svg";
-import circleBlue1 from "./assets/Thin circle blue 1.svg";
+import circleGreen from "./../../assets/Circles/Half_Circle_Green.svg";
 import zigzag from "./../../assets/ZigZags/Line_Green2.svg";
 
 const eventsSat = [
@@ -49,7 +49,7 @@ class EventSchedule extends Component {
               lg={1}
               style={{ display: "flex" }}
             >
-              <img src={circleBlue1} />
+              <img src={circleGreen} />
             </Col>
             <Col md={11} lg={9}>
               <EventScheduleTitle> Event Schedule </EventScheduleTitle>
