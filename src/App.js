@@ -3,16 +3,18 @@ import {
   AttendBox,
   SponsorBox,
   EventSchedule,
+  Navbar,
   FAQSection,
+  Header,
+  HeroText,
   TracksAndWorkshops
 } from "./components";
-import { Header } from "./components/Header/Header";
-import HeroText from "./components/HeroText";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <div className="Flair">
           <div className="headerbar">
             <HeroText
