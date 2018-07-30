@@ -5,8 +5,7 @@ import EventSchedule from "./EventSchedule";
 import FAQSection from "./FAQSection";
 import FAQEntry from "./FAQEntry";
 import Header from "./Header";
-import AttendBox from "./AttendBox";
-import SponsorBox from "./SponsorBox";
+import AttendAndSponsorBoxes from "./AttendAndSponsorBoxes";
 import TracksAndWorkshops from "./TracksAndWorkshops";
 
 export {
@@ -17,7 +16,6 @@ export {
   FAQSection,
   FAQEntry,
   Header,
-  AttendBox,
-  SponsorBox,
+  AttendAndSponsorBoxes,
   TracksAndWorkshops
 };
