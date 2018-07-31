@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ScheduleTable } from "../";
-import styled from "styled-components";
+import Header from "../Header";
+// import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
 
 const eventsSat = [
@@ -21,20 +22,11 @@ const eventsSun = [
   { time: "2:00 PM", name: "closing ceremony" }
 ];
 
-const EventScheduleTitle = styled.h2`
-  color: #ef833f;
-  font-family: "Roboto", sans-serif;
-  font-size: 48px;
-  font-weight: 500;
-  position: relative;
-  margin-left: 15%;
-`;
-
 class EventSchedule extends Component {
   render() {
     return (
       <React.Fragment>
-        <EventScheduleTitle> Event Schedule </EventScheduleTitle>
+        <Header contentProp={"Event Schedule"} colorProp="#EF833F" />
         <Flex flexWrap="wrap" justifyContent="space-between">
           <Box px={2} width={[1, 1, 1 / 2]}>
             <ScheduleTable events={eventsSat} title="Saturday" />

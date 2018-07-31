@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import Header from "../Header";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 

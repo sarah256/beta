@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
 import logoFooter from "../../assets/Logos/Logo-Small_footer.svg";
+import facebook from "../../assets/Logos/fb.svg";
+import twitter from "../../assets/Logos/Twitter.svg";
 
 const Text = styled.div`
   font-family: "Roboto", sans-serif;
@@ -20,12 +22,16 @@ const Bar = styled.div`
   padding: 5vw 0 2vw 0;
 `;
 
-const Spacer = styled.div`
+const Align = styled.div`
   display: flex;
   align-items: flex-end;
   width: 100%;
   text-transform: uppercase;
 `;
+
+const Spacer = {
+  marginRight: "5%"
+};
 
 export class FooterBar extends Component {
   render() {
@@ -33,14 +39,22 @@ export class FooterBar extends Component {
       <Bar>
         <Grid>
           <Row>
-            <Spacer>
-              <Col style={{ marginRight: "10%" }}>
+            <Align>
+              <Col style={Spacer}>
                 <img src={logoFooter} />
               </Col>
+              <Col style={Spacer}>
+                <img src={facebook} />
+              </Col>
+
+              <Col style={Spacer}>
+                <img src={twitter} />
+              </Col>
+
               <Col>
                 <Text>Back to Top</Text>
               </Col>
-            </Spacer>
+            </Align>
           </Row>
         </Grid>
       </Bar>
