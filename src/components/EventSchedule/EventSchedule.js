@@ -26,12 +26,15 @@ const eventsSun = [
 ];
 
 const EventScheduleTitle = styled.h2`
-  color: #ef833f;
+  color: #ef9b75;
   font-family: "Roboto", sans-serif;
   font-size: 33px;
   font-weight: 500;
   position: relative;
   margin-left: 17%;
+  @media (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 
 const GreenGrid = styled.img`

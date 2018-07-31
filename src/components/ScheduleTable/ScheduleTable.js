@@ -14,6 +14,7 @@ const Table = styled.table`
   tr:last-child td {
     padding-bottom: 0px;
   }
+  margin: 0 auto;
 `;
 
 const Title = styled.th`
@@ -21,6 +22,9 @@ const Title = styled.th`
   font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-weight: 400;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 class ScheduleTable extends Component {

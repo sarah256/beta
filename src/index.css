@@ -71,10 +71,6 @@ body {
   background-size: cover;
 }
 
-.TracksTitle{
-  margin-left: 8% !important;
-}
-
 @media only screen and (min-width: 620px) {
   .TracksAndWorkshops {
     background:
@@ -84,9 +80,6 @@ body {
         url("assets/Waves/Mid_Curve2.svg") left no-repeat;
     display:flex;
     background-size: cover, contain, cover, cover;
-  }
-  .TracksTitle {
-    text-align: right;
   }
 }
 
@@ -107,6 +100,16 @@ body {
       url("assets/Waves/Mid_Curve1.svg") right no-repeat,
       url("assets/Waves/Mid_Curve2.svg") right no-repeat;
     background-size: cover;
+  }
+}
+
+.TracksTitle{
+  margin-left: 6% !important;
+}
+
+@media only screen and (min-width: 500px) {
+  .TracksTitle {
+    text-align: right;
   }
 }
 

@@ -3,23 +3,29 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const TimeCell = styled.td`
+  padding-right: 10px;
   text-align: right;
-  padding-right: 30px;
   text-transform: uppercase;
 
   font-family: "Roboto", sans-serif;
   font-size: 28px;
   font-weight: 400;
   color: #ef9b75;
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
 `;
 
 const EventCell = styled.td`
-  padding-left: 30px;
+  padding-left: 7%;
   text-transform: uppercase;
-
+  white-space: nowrap;
   font-family: "Roboto Slab", serif;
   font-size: 24px;
   font-weight: 300;
+  @media (max-width: 500px) {
+    font-size: 13px;
+  }
 `;
 
 class ScheduleRow extends Component {
