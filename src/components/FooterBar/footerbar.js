@@ -44,11 +44,15 @@ export class FooterBar extends Component {
                 <img src={logoFooter} />
               </Col>
               <Col style={Spacer}>
-                <img src={facebook} />
+                <a href="https://www.facebook.com/bostonhacks/">
+                  <img src={facebook} />
+                </a>
               </Col>
 
               <Col style={Spacer}>
-                <img src={twitter} />
+                <a href="https://twitter.com/boston_hacks">
+                  <img src={twitter} />
+                </a>
               </Col>
 
               <Col>

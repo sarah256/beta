@@ -5,6 +5,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 
 import greenZig from "../../assets/ZigZags/Line_Green1.svg";
 import redTrian from "../../assets/Triangles/Triangle_Pink1.svg";
+import grid from "../../assets/Grids/Sq_Grid_Green.svg";
 
 const FAQEntryTitle = styled.div`
   margin-bottom: -10px;
@@ -29,7 +30,7 @@ const FAQHeader = FAQEntryTitle.extend`
 
 const FAQHeaderCopy = FAQEntryTitle.extend`
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 700;
   color: #000000;
   font-family: "Roboto Slab", serif;
 `;
@@ -133,7 +134,7 @@ class FAQSection extends Component {
             </Col>
           </Row>
 
-          <Row className="hidden-xs" style={{ marginRight: "-500px" }}>
+          <Row className="hidden-xs" style={{ marginLeft: "100%" }}>
             <img src={redTrian} />
           </Row>
 
@@ -153,6 +154,9 @@ class FAQSection extends Component {
               <FAQEntryTitle>Does it cost anything?</FAQEntryTitle>
               <FAQAnswer>
                 <p>BostonHacks is 100% free. You don’t have to spend a dime!</p>
+                <Col className="hidden-xs" style={{ paddingTop: "60%" }}>
+                  <img src={grid} />
+                </Col>
               </FAQAnswer>
             </Col>
             <Col xs={12} md={4}>
