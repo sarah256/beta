@@ -8,13 +8,23 @@ import { Flex, Box } from "grid-styled";
 class AttendAndSponsorBoxes extends Component {
   render() {
     return (
-      <Flex className="attendSponsorFlex">
+      <Flex className="attendSponsorFlex" flexDirection={"row"} wrap>
         <Box width={[0, 1 / 11, 1 / 5]} />
-        <Box width={[1, 4 / 11, 5 / 20]}>
+        <Box
+          width={[1, 4 / 11, 5 / 20]}
+          pl={[52, 0, 0]}
+          pr={[52, 0, 0]}
+          pb={[12, 0, 0]}
+        >
           <AttendBox />
         </Box>
-        <Box width={[0, 1 / 11, 1 / 10]} />
-        <Box width={[1, 4 / 11, 5 / 20]}>
+        <Box width={[1, 1 / 11, 1 / 10]} />
+        <Box
+          width={[1, 4 / 11, 5 / 20]}
+          pl={[52, 0, 0]}
+          pr={[52, 0, 0]}
+          pb={[12, 0, 0]}
+        >
           <SponsorBox />
         </Box>
         <Box width={[0, 1 / 11, 1 / 5]} />
