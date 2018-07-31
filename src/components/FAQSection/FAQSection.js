@@ -1,30 +1,24 @@
 import React, { Component } from "react";
+import Header from "../Header";
 import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Flex, Box } from "grid-styled";
 
 const FAQEntryTitle = styled.div`
   margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 400;
-  color: #2fb5e3;
+  color: #3cbfce;
 `;
 
 const FAQAnswer = styled.div`
-  margin-bottom: 20px
-  margin-right: 20px
   font-family: "Roboto Slab", serif;
-  font-size: 19px;
+  font-size: 27px;
   font-weight: 300;
 `;
 
-const FAQHeader = FAQEntryTitle.extend`
-  font-size: 33px;
-  font-weight: 500;
-`;
-
 const FAQHeaderCopy = FAQAnswer.extend`
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
 `;
 
@@ -39,6 +33,8 @@ const FAQInfo = [
     body:
       "We expect 400 to 450 hackers from all over North America to attend BostonHacks."
   },
+  {},
+  {},
   {
     title: "Who can attend?",
     body:
@@ -59,6 +55,8 @@ const FAQInfo = [
     body:
       "You should bring your laptop, phone, chargers, toiletries, and optionally a sleeping bag. All food and other accommodations will be taken care of."
   },
+  {},
+  {},
   {
     title: "Can we form teams?",
     body:
@@ -68,6 +66,8 @@ const FAQInfo = [
     title: "Does it cost anything?",
     body: "BostonHacks is 100% free. You don’t have to spend a dime!"
   },
+  {},
+  {},
   {
     title: "Will there be travel reimbursements?",
     body:
@@ -78,35 +78,43 @@ const FAQInfo = [
 class FAQSection extends Component {
   render() {
     const rows = [];
-    for (var i = 0; i < FAQInfo.length; i++) {
+    for (var i = 0; i < FAQInfo.length; i += 3) {
+      var row = [];
+      for (var j = 0; j < 3; j++) {
+        if (FAQInfo[i + j].title) {
+          row.push(
+            <Box p={3} width={[1, 1 / 2, 1 / 3]}>
+              <FAQEntryTitle> {FAQInfo[i + j].title} </FAQEntryTitle>
+              <FAQAnswer> {FAQInfo[i + j].body} </FAQAnswer>
+            </Box>
+          );
+        } else {
+          row.push(<Box width={[0, 0, 1 / 3]} />);
+        }
+      }
       rows.push(
-        <Col sm={12} md={6} lg={4}>
-          <FAQEntryTitle> {FAQInfo[i].title} </FAQEntryTitle>
-          <FAQAnswer> {FAQInfo[i].body} </FAQAnswer>
-        </Col>
+        <Flex flexWrap="wrap" justifyContent="space-between" key={i / 3}>
+          {row}
+        </Flex>
       );
     }
     return (
-      <Grid fluid>
-        <Row>
-          <Col className="hidden-md" lg={1} />
-          <Col md={12} lg={10}>
-            <Row>
-              <Col md={12} lg={8} lgOffset={4}>
-                <FAQHeader> Frequently Asked Questions </FAQHeader>
-                <FAQHeaderCopy>
-                  The event is still a ways away, so check back closer to the
-                  hackathon for more information.
-                </FAQHeaderCopy>
-              </Col>
-            </Row>
-            <Row className="wrap" between="lg">
-              {rows}
-            </Row>
-          </Col>
-          <Col className="hidden-md" lg={1} />
-        </Row>
-      </Grid>
+      <div>
+        <Flex justifyContent="space-between">
+          <Box width={[0, 1 / 3]} />
+          <Box p={3} width={[1, 2 / 3]}>
+            <Header
+              contentProp={"Frequently Asked Questions"}
+              colorProp={"#3cbfce"}
+            />
+            <FAQHeaderCopy>
+              The event is still a ways away, so check back closer to the
+              hackathon for more information.
+            </FAQHeaderCopy>
+          </Box>
+        </Flex>
+        <div>{rows}</div>
+      </div>
     );
   }
 }

@@ -1,21 +1,22 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const Div = styled.div`
-  height: 100%;
-  width: 100%;
-  font-family: .SFNSDisplay;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0;
 `;
 
 export class Header extends Component {
   render() {
     return (
-      <Div style={{ background: this.props.backgroundProp }}>
-        <h3 style={{ color: this.props.colorProp }}>
+      <div style={{ background: this.props.backgroundProp }}>
+        <Div style={{ color: this.props.colorProp }}>
           {this.props.contentProp}
-        </h3>
-      </Div>
+        </Div>
+      </div>
     );
   }
 }
@@ -29,7 +30,7 @@ Header.propTypes = {
 Header.defaultProps = {
   contentProp: "A header should go here",
   colorProp: "#dc4b6a",
-  backgroundProp: "#3dbecd"
+  backgroundProp: "#fff"
 };
 
 export default Header;
