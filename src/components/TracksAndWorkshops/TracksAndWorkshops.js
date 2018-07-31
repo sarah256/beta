@@ -5,6 +5,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 import gridBlue from "./../../assets/Grids/Sq_grid_Blue.svg";
 import circleBlue from "./../../assets/Circles/Circle_Blue1.svg";
 import triangOrange from "./../../assets/Triangles/Tri_Orng1.svg";
+// import Wave1 from "./../../assets/Waves/Mid_Curve1.svg";
 
 const TracksTitle = styled.p`
   color: #f05352;
@@ -51,17 +52,25 @@ const Row3 = styled.div`
   margin-bottom: 22%;
 `;
 
+/*
+const Background = styled.img`
+  position: absolute;
+  z-index: -1;
+  object-fit: fill;
+  width: 100%;
+`;
+*/
 export class TracksAndWorkshops extends Component {
   render() {
     return (
       <div className="TracksAndWorkshops">
         <Grid fluid>
           <Row1>
-            <Row>
+            <Row className="TracksTitle">
               <Col md={12} lg={7} align="center">
                 <img src={gridBlue} />
               </Col>
-              <Col md={12} lg={5} align="right">
+              <Col md={12} lg={5}>
                 <TracksTitle> Tracks and Workshops </TracksTitle>
                 <TracksBody>
                   Tracks are optional specialized topics or technologies you can
