@@ -17,31 +17,32 @@ const Text = styled.div`
 
 const Bar = styled.div`
   background-color: #2a2563;
-  margin-top: -1vw;
+  margin-top: -1vh;
   width: 100%;
-  padding: 5vw 0 2vw 0;
+  padding: 2vw 0 2vw 0;
 `;
 
 const Align = styled.div`
   display: flex;
+  justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
   text-transform: uppercase;
 `;
 
 const Spacer = {
-  marginRight: "5%"
+  marginRight: "2vw"
 };
 
 export class FooterBar extends Component {
   render() {
     return (
       <Bar>
-        <Grid>
+        <Grid style={{ margin: "0", paddingLeft: "5vh" }}>
           <Row>
             <Align>
               <Col style={Spacer}>
-                <img src={logoFooter} />
+                <img src={logoFooter} style={{ height: "5vh" }} />
               </Col>
               <Col style={Spacer}>
                 <a href="https://www.facebook.com/bostonhacks/">
@@ -56,7 +57,9 @@ export class FooterBar extends Component {
               </Col>
 
               <Col>
-                <Text>Back to Top</Text>
+                <Text>
+                  <a href="#top">Back to Tops</a>
+                </Text>
               </Col>
             </Align>
           </Row>

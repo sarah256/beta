@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import "./foot.css";
 
 import circle1 from "../../assets/Circles/Circle_Green.svg";
 import zig from "../../assets/ZigZags/Line_Orng2.svg";
@@ -15,15 +16,15 @@ import liberty from "../../assets/SponsorLogos/Liberty/libertyLogo.png";
 const Text = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 2vw;
+  font-size: 3vw;
   color: #ffffff;
   display: flex;
   margin-bottom: 10%;
 `;
 
 const Logo = {
-  height: "5vw",
-  padding: "0 7vw 0 7vw"
+  height: "7vh",
+  padding: "0 7vh 5vh 7vh"
 };
 
 const centerTable = {
@@ -39,12 +40,12 @@ export class Footer extends Component {
       <div style={{ paddingTop: "12vw" }}>
         <Grid fluid>
           <Row style={{ marginBottom: "5vw" }}>
-            <Col className="hidden-xs" xs={6}>
+            <Col className="hidden-xs hidden-sm" xs={6}>
               <div style={{ marginLeft: "0vw" }}>
                 <img src={circle1} />
               </div>
             </Col>
-            <Col className="hidden-xs" xs={6}>
+            <Col className="hidden-xs hidden-sm" xs={6}>
               <div style={{ marginLeft: "20vw" }}>
                 <img src={zig} />
               </div>
@@ -55,20 +56,20 @@ export class Footer extends Component {
           </Row>
 
           <Row>
-            <Col xs={4}>
+            <Col xs={12} md={4} style={centerTable}>
               <img style={Logo} src={twillio} />
             </Col>
-            <Col xs={4}>
+            <Col xs={12} md={4} style={centerTable}>
               <img style={Logo} src={google} />
             </Col>
-            <Col xs={4}>
+            <Col xs={12} md={4} style={centerTable}>
               <img style={Logo} src={giphy} />
             </Col>
           </Row>
 
           <Row style={centerTable}>
-            <Col xs={4}>
-              <img style={{ height: "14vw" }} src={liberty} />
+            <Col xs={12} md={4} style={centerTable}>
+              <img style={{ height: "17vh" }} src={liberty} />
             </Col>
           </Row>
         </Grid>

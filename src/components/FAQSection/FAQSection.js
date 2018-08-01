@@ -65,7 +65,7 @@ class FAQSection extends Component {
           </Row>
 
           <Row style={{ display: "flex", justifyContent: "flex start" }}>
-            <div className="hidden-xs" style={{ marginLeft: "-16%" }}>
+            <div style={{ marginLeft: "-16%" }}>
               <img src={greenZig} />
             </div>
           </Row>
