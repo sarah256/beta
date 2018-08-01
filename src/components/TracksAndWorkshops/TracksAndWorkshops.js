@@ -15,6 +15,9 @@ const TracksTitle = styled.p`
   @media (max-width: 500px) {
     font-size: 17px;
   }
+  @media (min-width: 1200px) {
+    font-size: 2.8vw;
+  }
 `;
 
 const TracksBody = styled.p`
@@ -25,12 +28,18 @@ const TracksBody = styled.p`
   @media (max-width: 500px) {
     font-size: 14px;
   }
+  @media (min-width: 1200px) {
+    font-size: 1.9vw;
+  }
 `;
 
 const LastYear = TracksTitle.extend`
   font-size: 30px;
   @media (max-width: 500px) {
     font-size: 16px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 2.5vw;
   }
 `;
 
@@ -42,6 +51,9 @@ const TrackName = styled.p`
   @media (max-width: 500px) {
     font-size: 16px;
   }
+  @media (min-width: 1200px) {
+    font-size: 2vw;
+  }
 `;
 
 const TracksCopy = TracksBody.extend`
@@ -49,6 +61,9 @@ const TracksCopy = TracksBody.extend`
   font-weight: 300;
   @media (max-width: 500px) {
     font-size: 12.5px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 1.5vw;
   }
 `;
 
