@@ -39,7 +39,7 @@ class AttendBox extends Component {
   render() {
     return (
       <Fragment>
-        <Header contentProp="Attend" colorProp="#3cbfce" />
+        <Header contentProp="Attend" colorProp="#2fb5e3" />
         <p>
           Thanks for the interest! Leave your email address below or follow us
           on social media to get notified when there is more information and
@@ -52,7 +52,7 @@ class AttendBox extends Component {
             placeholder="hacker@anyschool.edu"
           />
           <button
-            style={{ backgroundColor: "#3cbfce" }}
+            style={{ backgroundColor: "#2fb5e3" }}
             onClick={this.handleClick}
           >
             Subscribe

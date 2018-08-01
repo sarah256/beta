@@ -7,10 +7,10 @@ class SponsorBox extends Component {
   render() {
     return (
       <Fragment>
-        <Header contentProp="Sponsor" colorProp="#fc1949" />
+        <Header contentProp="Sponsor" colorProp="#f05352" />
         <p>We would love to have you on board. Contact us here!</p>
         <button
-          style={{ backgroundColor: "#fc1949" }}
+          style={{ backgroundColor: "#f05352" }}
           onClick={this.handleClick}
         >
           Contact Us
