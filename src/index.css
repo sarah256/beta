@@ -133,11 +133,13 @@ input {
 }
 
 @media only screen and (min-width: 1200px) {
-  .TracksAndWorkshops {
+  .TracksAndWorkshops {    
     background:
       url("assets/Waves/Mid_Curve1.svg") right no-repeat,
       url("assets/Waves/Mid_Curve2.svg") right no-repeat;
     background-size: cover;
+    width: 100vw;
+    height: 102vw;
   }
 }
 
