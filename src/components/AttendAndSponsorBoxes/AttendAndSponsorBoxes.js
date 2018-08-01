@@ -9,25 +9,20 @@ class AttendAndSponsorBoxes extends Component {
   render() {
     return (
       <Flex className="attendSponsorFlex" flexDirection={"row"} wrap>
-        <Box width={[0, 1 / 11, 1 / 5]} />
         <Box
-          width={[1, 4 / 11, 5 / 20]}
-          pl={[52, 0, 0]}
-          pr={[52, 0, 0]}
-          pb={[12, 0, 0]}
+          width={[1, 1 / 2, 1 / 2, 1 / 2]}
+          pl={[52, 52, 100, 280]}
+          pr={[52, 24, 48, 76]}
         >
           <AttendBox />
         </Box>
-        <Box width={[1, 1 / 11, 1 / 10]} />
         <Box
-          width={[1, 4 / 11, 5 / 20]}
-          pl={[52, 0, 0]}
-          pr={[52, 0, 0]}
-          pb={[12, 0, 0]}
+          width={[1, 1 / 2, 1 / 2, 1 / 2]}
+          pl={[52, 24, 48, 76]}
+          pr={[52, 52, 100, 280]}
         >
           <SponsorBox />
         </Box>
-        <Box width={[0, 1 / 11, 1 / 5]} />
       </Flex>
     );
   }
