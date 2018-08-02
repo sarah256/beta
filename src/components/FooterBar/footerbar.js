@@ -31,7 +31,7 @@ const Align = styled.div`
 `;
 
 const Spacer = {
-  marginRight: "2vw"
+  marginRight: "2vh"
 };
 
 export class FooterBar extends Component {
@@ -58,7 +58,7 @@ export class FooterBar extends Component {
 
               <Col>
                 <Text>
-                  <a href="#top">Back to Tops</a>
+                  <a href="#top">Back to Top</a>
                 </Text>
               </Col>
             </Align>
