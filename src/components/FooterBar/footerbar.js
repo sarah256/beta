@@ -9,7 +9,7 @@ import twitter from "../../assets/Logos/Twitter.svg";
 const Text = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 2vh;
   color: #ffffff;
   display: flex;
   margin-bottom: 10%;

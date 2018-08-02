@@ -55,7 +55,7 @@ export class Footer extends Component {
             <Text>Thank you to our sponsors!</Text>
           </Row>
 
-          <Row>
+          <Row style={centerTable}>
             <Col xs={12} md={4} style={centerTable}>
               <img style={Logo} src={twillio} />
             </Col>
