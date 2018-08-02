@@ -24,6 +24,7 @@ button {
   color: white;
   padding: 0.7em 1.4em 0.7em 1.4em;
   border-radius: 14px;
+  border-style: none;
   vertical-align: center;
   cursor: pointer;
 
