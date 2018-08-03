@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-          <div className="Flair">
+          <div className="hero-background">
             <div className="headerbar">
               <HeroText
                 title="Boston"

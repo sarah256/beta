@@ -51,7 +51,7 @@ input {
   color: #bbb;
 }
 
-.Flair {
+.hero-background {
   background:
       url("assets/Waves/Header_Curve1.svg") no-repeat,
       url("assets/Waves/Header_Curve2.svg") no-repeat;
