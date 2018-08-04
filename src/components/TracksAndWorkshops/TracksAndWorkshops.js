@@ -1,107 +1,140 @@
 import React, { Component } from "react";
-import Header from "../Header";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-const Taw = styled.div`
-  height: 100%;
-  width: 100%;
-  font-family: .SFNSDisplay;
-  color: #222222;
-  background-height: auto;
-  background-size: cover;
-  background-color: rgb(61, 190, 205);
+import gridBlue from "./../../assets/Grids/Sq_grid_Blue.svg";
+import circleBlue from "./../../assets/Circles/Circle_Blue1.svg";
+import triangOrange from "./../../assets/Triangles/Tri_Orng1.svg";
+
+const TracksTitle = styled.p`
+  color: #f05352;
+  font-family: "Roboto", sans-serif;
+  font-size: 33px;
+  font-weight: 500;
+  @media (max-width: 500px) {
+    font-size: 17px;
+  }
 `;
 
-const centeredImg = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "..",
-  height: ".."
-};
+const TracksBody = styled.p`
+  color: #ffffff;
+  font-family: "Roboto slab", serif;
+  font-size: 24px;
+  font-weight: 400;
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+`;
+
+const LastYear = TracksTitle.extend`
+  font-size: 30px;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+`;
+
+const TrackName = styled.p`
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #ffffff;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+`;
+
+const TracksCopy = TracksBody.extend`
+  font-size: 19px;
+  font-weight: 300;
+  @media (max-width: 500px) {
+    font-size: 12.5px;
+  }
+`;
+
+const Row1 = styled.div`
+  margin-top: 18%;
+  margin-right: 5%;
+  @media (min-width: 1500px) {
+    margin-bottom: 15%;
+  }
+`;
+
+const Row2 = styled.div`
+  margin-left: 8%;
+  margin-right: 5%;
+`;
+
+const Row3 = styled.div`
+  margin-left: 5%;
+  margin-bottom: 22%;
+`;
 
 export class TracksAndWorkshops extends Component {
   render() {
     return (
-      <Taw>
-        <div>
-          <br />
-          <br />
-          <Grid fluid>
-            <Row>
-              <Col className="hidden-xs" sm={6}>
-                <div style={centeredImg} />
+      <div className="TracksAndWorkshops">
+        <div className="background-div1" />
+        <div className="background-div2" />
+        <div className="background-div3" />
+        <Grid fluid>
+          <Row1>
+            <Row className="TracksTitle">
+              <Col md={12} lg={7} align="center">
+                <img src={gridBlue} className="icons1" />
               </Col>
-              <Col xs={12} sm={6}>
-                <Header
-                  contentProp={"Tracks and Workshops"}
-                  colorProp={"#b7d98b"}
-                  backgroundProp={"#3dbecd"}
-                />
-                <p align="right">
+              <Col md={12} lg={5}>
+                <TracksTitle> Tracks and Workshops </TracksTitle>
+                <TracksBody>
                   Tracks are optional specialized topics or technologies you can
                   aim your project at. We&apos;ll have sponsors, workshops, and
                   mentors to help you with your track-based project (as well as
                   specialized prizes). Tracks are optional, make a hack
                   you&apos;re interested in! Check back soon to see what our
                   tracks will be this year!
-                </p>
+                </TracksBody>
               </Col>
             </Row>
-
+          </Row1>
+          <Row2>
             <Row>
-              <Col smOffset={1} sm={5}>
-                <Header
-                  contentProp={"Last year's tracks:"}
-                  colorProp={"#b7d98b"}
-                  backgroundProp={"#3dbecd"}
-                />
+              <Col md={6} lg={9}>
+                <LastYear> Last year&apos;s tracks: </LastYear>
               </Col>
-              <Col className="hidden-xs" sm={5}>
-                <div style={centeredImg} />
+              <Col md={6} lg={3} align="center">
+                <img src={circleBlue} className="icons1" />
               </Col>
             </Row>
-
             <Row>
-              <Col smOffset={1} sm={3} xs={12}>
-                <h3 style={{ color: "#EEEEEE" }}> Web and Mobile</h3>
-                <p>
-                  Led by OpenWeb BU, hackers learned how to make a website or
-                  mobile app from the ground up.
-                </p>
+              <Col md={12} lg={3}>
+                <TrackName> Web and mobile </TrackName>
+                <TracksCopy>
+                  Led by <b> OpenWeb BU </b>, hackers learned how to make a
+                  website or mobile app from the ground up.
+                </TracksCopy>
               </Col>
-              <Col sm={3} xs={12}>
-                <h3 style={{ color: "#EEEEEE" }}> Machine Learning</h3>
-                <p>
-                  Led by BU’s Machine Intelligence Community, hackers learned
-                  how to get into the basics of several ML frameworks, and moved
-                  on to more advanced topics.
-                </p>
+              <Col md={12} lg={3}>
+                <TrackName> Machine Learning </TrackName>
+                <TracksCopy>
+                  Led by <b> BU’s Machine Intelligence Community </b>, hackers
+                  learned how to get into the basics of several ML frameworks,
+                  and moved on to more advanced topics.
+                </TracksCopy>
               </Col>
-              <Col sm={3} xs={12}>
-                <h3 style={{ color: "#EEEEEE" }}> Virtual Reality</h3>
-                <p>
-                  Led by BU AR/VR, hackers got a jumpstart into creating in 3D.
-                  Then they created hacks on the Oculus Rifts we made available
-                  to them.
-                </p>
-              </Col>
-            </Row>
-
-            <Row>
-              <Col className="hidden-xs" xs={3}>
-                <div style={centeredImg} />
-              </Col>
-              <Col className="hidden-xs" xsOffset={6} xs={3}>
-                <div style={centeredImg} />
+              <Col xs={10} lg={3}>
+                <TrackName> Virtual Reality </TrackName>
+                <TracksCopy>
+                  Led by <b> BU AR/VR </b>, hackers got a jumpstart into
+                  creating in 3D. Then they created hacks on the Oculus Rifts we
+                  made available to them.
+                </TracksCopy>
               </Col>
             </Row>
-          </Grid>
-          <br />
-          <br />
-        </div>
-      </Taw>
+          </Row2>
+          <Row3>
+            <img src={triangOrange} className="icons1" />
+          </Row3>
+        </Grid>
+      </div>
     );
   }
 }

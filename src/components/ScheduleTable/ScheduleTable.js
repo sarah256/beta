@@ -14,13 +14,19 @@ const Table = styled.table`
   tr:last-child td {
     padding-bottom: 0px;
   }
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+  }
 `;
 
 const Title = styled.th`
   padding-left: 30px;
   font-family: "Roboto", sans-serif;
-  font-size: 44px;
+  font-size: 30px;
   font-weight: 400;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 class ScheduleTable extends Component {

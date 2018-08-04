@@ -100,3 +100,65 @@ input {
   line-height: 10%;
   font-size: 2vw;
 }
+
+.TracksAndWorkshops {
+  position: relative;
+  display: flex;
+  min-height: 90vw;
+}
+
+.background-div1 {
+  background: url("assets/Waves/MidCurve.svg") no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  height: 40vw;
+  width: 100%;
+  z-index: -1;
+}
+
+.background-div2 {
+  background-color: #292563;
+  
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 88vw);
+  z-index: -1;
+
+  margin-top: 39vw;
+}
+
+.background-div3 {
+  background: url("assets/Waves/MidCurve.svg") right bottom no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  height: 50vw;
+  width: 100%;
+  z-index: -1;
+
+  bottom: 0;
+}
+
+
+.TracksTitle{
+  margin-left: 6% !important;
+}
+
+@media only screen and (min-width: 500px) {
+  .TracksTitle {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .icons1 {
+    width: 40px;
+    height: auto;
+  }
+
+  .icons2 {
+    height: 40px;
+    width: auto;
+  }
+}
