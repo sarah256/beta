@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,700');
 
-html {
+html, body {
   height: 100%;
-}
-
-body {
-  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: sans-serif;
 }
 
@@ -58,6 +56,22 @@ input {
   display:flex;
   background-size: contain;
 }
+
+.footerFlair {
+  background: url("assets/Waves/FooterCurve.svg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+  height: 100vh;
+  width: 100%;
+}
+
 
 .headerbar {
   margin-top: 20%;
