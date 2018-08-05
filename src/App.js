@@ -4,7 +4,8 @@ import {
   AttendAndSponsorBoxes,
   EventSchedule,
   FAQSection,
-  TracksAndWorkshops
+  TracksAndWorkshops,
+  Flair
 } from "./components";
 import { Header } from "./components/Header/Header";
 import HeroText from "./components/HeroText";
@@ -24,6 +25,8 @@ class App extends Component {
               />
             </div>
           </div>
+
+          <Flair type="squiggle" />
 
           <AttendAndSponsorBoxes />
 

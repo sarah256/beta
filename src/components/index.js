@@ -7,6 +7,7 @@ import FAQEntry from "./FAQEntry";
 import Header from "./Header";
 import AttendAndSponsorBoxes from "./AttendAndSponsorBoxes";
 import TracksAndWorkshops from "./TracksAndWorkshops";
+import Flair from "./Flair";
 
 export {
   Container,
@@ -17,5 +18,6 @@ export {
   FAQEntry,
   Header,
   AttendAndSponsorBoxes,
-  TracksAndWorkshops
+  TracksAndWorkshops,
+  Flair
 };
