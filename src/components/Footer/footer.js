@@ -16,14 +16,21 @@ import liberty from "../../assets/SponsorLogos/Liberty/libertyLogo.png";
 const Text = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 3vw;
+  font-size: 2vw;
   color: #ffffff;
   display: flex;
   margin-bottom: 10%;
+  margin-top: 10%;
+  @media (max-width: 500px) {
+    font-size: 17px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 `;
 
 const Logo = {
-  height: "7vh",
+  height: "8vh",
   padding: "0 7vh 5vh 7vh"
 };
 
@@ -35,8 +42,6 @@ const centerTable = {
 export class Footer extends Component {
   render() {
     return (
-      // <Wave2>
-      // <Wave1>
       <div style={{ paddingTop: "12vw" }}>
         <Grid fluid>
           <Row style={{ marginBottom: "5vw" }}>
@@ -74,8 +79,6 @@ export class Footer extends Component {
           </Row>
         </Grid>
       </div>
-      // </Wave1>
-      // </Wave2>
     );
   }
 }

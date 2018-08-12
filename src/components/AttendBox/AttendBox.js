@@ -1,5 +1,45 @@
 import React, { Component, Fragment } from "react";
-import Header from "../Header";
+import styled from "styled-components";
+import { Row, Col } from "react-flexbox-grid";
+
+const SubscribeButton = styled.button`
+  background-color: #2fb5e3;
+  box-sizing: border-box;
+`;
+
+const EmailField = styled.input`
+  width: 76%;
+  @media (max-width: 500px) {
+    width: 67%;
+  }
+`;
+
+const Text = styled.div`
+  font-family: "Roboto slab", sans-serif;
+  font-weight: 300;
+  font-size: 1.375em;
+  padding-top: 5%;
+  padding-bottom: 8%;
+
+  @media (max-width: 850px) {
+    font-size: 1.125em;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.06em;
+  }
+`;
+
+const Title = styled.h2`
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0;
+  color: #2fb5e3;
+  @media (max-width: 500px) {
+    font-size: 1.56em;
+  }
+`;
 
 const InvalidEmailText = () => (
   <p style={{ color: "red" }}>
@@ -39,26 +79,27 @@ class AttendBox extends Component {
   render() {
     return (
       <Fragment>
-        <Header contentProp="Attend" colorProp="#2fb5e3" />
-        <p>
+        <Title>Attend</Title>
+        <Text>
           Thanks for the interest! Leave your email address below or follow us
           on social media to get notified when there is more information and
           registration opens!
-        </p>
-        <div>
-          <input
-            value={this.state.userEmail}
-            onChange={this.handleChange}
-            placeholder="hacker@anyschool.edu"
-          />
-          <button
-            style={{ backgroundColor: "#2fb5e3" }}
-            onClick={this.handleClick}
-          >
-            Subscribe
-          </button>
+        </Text>
+        <Row>
+          <Col md={6} xs={6}>
+            <EmailField
+              value={this.state.userEmail}
+              onChange={this.handleChange}
+              placeholder="hacker@school.edu"
+            />
+          </Col>
+          <Col md={6} xs={6}>
+            <SubscribeButton onClick={this.handleClick}>
+              Subscribe
+            </SubscribeButton>
+          </Col>
           {this.state.showInvalidEmailText ? <InvalidEmailText /> : null}
-        </div>
+        </Row>
       </Fragment>
     );
   }

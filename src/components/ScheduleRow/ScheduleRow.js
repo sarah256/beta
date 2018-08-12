@@ -7,11 +7,11 @@ const TimeCell = styled.td`
   text-align: right;
 
   font-family: "Roboto", sans-serif;
-  font-size: 28px;
+  font-size: 1.75em;
   font-weight: 400;
   color: #ef9b75;
   @media (max-width: 500px) {
-    font-size: 14px;
+    font-size: 0.875em;
   }
 `;
 
@@ -19,10 +19,10 @@ const EventCell = styled.td`
   padding-left: 7%;
   white-space: nowrap;
   font-family: "Roboto Slab", serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 300;
   @media (max-width: 500px) {
-    font-size: 13px;
+    font-size: 0.875em;
   }
 `;
 

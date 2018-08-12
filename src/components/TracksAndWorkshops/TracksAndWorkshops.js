@@ -9,42 +9,42 @@ import triangOrange from "./../../assets/Triangles/Tri_Orng1.svg";
 const TracksTitle = styled.p`
   color: #f05352;
   font-family: "Roboto", sans-serif;
-  font-size: 33px;
+  font-size: 2.75em;
   font-weight: 500;
   @media (max-width: 500px) {
-    font-size: 17px;
+    font-size: 1.3em;
   }
 `;
 
 const TracksBody = styled.p`
   color: #ffffff;
   font-family: "Roboto slab", serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 400;
   @media (max-width: 500px) {
-    font-size: 14px;
+    font-size: 0.9em;
   }
 `;
 
 const LastYear = TracksTitle.extend`
-  font-size: 30px;
+  font-size: 2.3em;
   @media (max-width: 500px) {
-    font-size: 16px;
+    font-size: 1em;
   }
 `;
 
 const TrackName = styled.p`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.75em;
   color: #ffffff;
   @media (max-width: 500px) {
-    font-size: 16px;
+    font-size: 1em;
   }
 `;
 
 const TracksCopy = TracksBody.extend`
-  font-size: 19px;
+  font-size: 1.2em;
   font-weight: 300;
   @media (max-width: 500px) {
     font-size: 12.5px;
@@ -138,17 +138,5 @@ export class TracksAndWorkshops extends Component {
     );
   }
 }
-
-// Header.propTypes = {
-//   contentProp: PropTypes.string,
-//   colorProp: PropTypes.string,
-//   backgroundProp: PropTypes.string
-// };
-
-// Header.defaultProps = {
-//   contentProp: "A header should go here",
-//   colorProp: "#dc4b6a",
-//   backgroundProp: "#3dbecd"
-// };
 
 export default TracksAndWorkshops;

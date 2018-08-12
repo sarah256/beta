@@ -50,68 +50,24 @@ input, textarea{
 }
 
 .Flair {
-  background:
-      url("assets/Waves/Header_Curve1.svg") no-repeat,
-      url("assets/Waves/Header_Curve2.svg") no-repeat;
+  background: url("assets/Waves/Header_Curve.svg") no-repeat;
   display:flex;
-  background-size: contain;
+  background-size: cover;
 }
 
 .footerFlair {
   background: url("assets/Waves/FooterCurve.svg") no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
 }
 
 .footer {
   display:flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-top: 10vh;
+  height: 91vh;
   width: 100%;
-}
-
-
-.headerbar {
-  margin-top: 20%;
-  margin-left: 12%;
-  margin-bottom: 25%;
-  align-items: center;
-  display: flex;
-}
-
-.Title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: #ffffff;
-  display: inline;
-  line-height: 0%;
-  font-size: 5vw;
-}
-
-.Bold {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  color: #ffffff;
-  display: inline;
-  line-height: 0%;
-  font-size: 5vw;
-}
-
-.Date {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: #ffffff;
-  line-height: 0%;
-  font-size: 2vw;
-}
-
-.Location {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  color: #ffffff;
-  line-height: 10%;
-  font-size: 2vw;
 }
 
 .TracksAndWorkshops {
@@ -132,7 +88,7 @@ input, textarea{
 
 .background-div2 {
   background-color: #292563;
-  
+
   position: absolute;
   width: 100%;
   height: calc(100% - 88vw);
@@ -166,12 +122,28 @@ input, textarea{
 
 @media only screen and (max-width: 500px) {
   .icons1 {
-    width: 40px;
+    width: 50px;
     height: auto;
   }
 
   .icons2 {
     height: 40px;
     width: auto;
+  }
+
+  .Title {
+    font-size: 8vw;
+  }
+
+  .Bold {
+    font-size: 8vw;
+  }
+
+  .Date {
+    font-size: 3vw;
+  }
+
+  .Location {
+    font-size: 3vw;
   }
 }

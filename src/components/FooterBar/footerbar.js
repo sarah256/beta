@@ -12,7 +12,6 @@ const Text = styled.div`
   font-size: 2vh;
   color: #ffffff;
   display: flex;
-  margin-bottom: 10%;
 `;
 
 const Bar = styled.div`
@@ -25,13 +24,14 @@ const Bar = styled.div`
 const Align = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-content: flex-end;
+  align-items: center;
   width: 100%;
   text-transform: uppercase;
 `;
 
 const Spacer = {
-  marginRight: "2vh"
+  marginRight: "5vh"
 };
 
 export class FooterBar extends Component {
@@ -42,7 +42,7 @@ export class FooterBar extends Component {
           <Row>
             <Align>
               <Col style={Spacer}>
-                <img src={logoFooter} style={{ height: "5vh" }} />
+                <img src={logoFooter} style={{ height: "1.6em" }} />
               </Col>
               <Col style={Spacer}>
                 <a href="https://www.facebook.com/bostonhacks/">

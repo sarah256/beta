@@ -6,13 +6,13 @@ import styled from "styled-components";
 const Table = styled.table`
   th {
     text-align: left;
+    padding-bottom: 18px;
   }
-  td,
-  th {
-    padding-bottom: 10px;
+  td {
+    padding-bottom: 15px;
   }
   tr:last-child td {
-    padding-bottom: 0px;
+    padding-bottom: 25px;
   }
   @media (max-width: 1000px) {
     margin: 0 auto;
@@ -20,12 +20,12 @@ const Table = styled.table`
 `;
 
 const Title = styled.th`
-  padding-left: 30px;
+  padding-left: 7%;
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 1.875em;
   font-weight: 400;
   @media (max-width: 500px) {
-    font-size: 16px;
+    font-size: 1em;
   }
 `;
 

@@ -17,16 +17,12 @@ class App extends Component {
       <div>
         <a name="top" />
         <div className="App">
-          <div className="Flair">
-            <div className="headerbar">
-              <HeroText
-                title="Boston"
-                titleBold="Hacks"
-                date="November 10th - November 11th"
-                location="Boston University"
-              />
-            </div>
-          </div>
+          <HeroText
+            title="Boston"
+            titleBold="Hacks"
+            date="November 10th - November 11th"
+            location="Boston University"
+          />
 
           <AttendAndSponsorBoxes />
 
