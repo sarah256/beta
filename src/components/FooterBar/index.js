@@ -1,2 +1,2 @@
-import FooterBar from "./footerbar";
+import FooterBar from "./FooterBar";
 export default FooterBar;

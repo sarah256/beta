@@ -4,6 +4,7 @@ import EventSchedule from "./EventSchedule";
 import FAQSection from "./FAQSection";
 import AttendAndSponsorBoxes from "./AttendAndSponsorBoxes";
 import TracksAndWorkshops from "./TracksAndWorkshops";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ContactForm from "./ContactForm";
 import ContactHead from "./ContactHead";
@@ -18,6 +19,7 @@ export {
   EventSchedule,
   FAQSection,
   Footer,
+  Navbar,
   AttendAndSponsorBoxes,
   TracksAndWorkshops,
   FooterBar,

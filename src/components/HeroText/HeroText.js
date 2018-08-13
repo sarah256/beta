@@ -38,8 +38,8 @@ const Line = styled.img`
     margin-top: -10%;
   }
 
-  @media (max-width: 230px) {
-    margin-right: 0;
+  @media (max-width: 380px) {
+    visibility: hidden;
   }
 `;
 
