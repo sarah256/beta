@@ -1,13 +1,10 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
-import { Row, Col } from "react-flexbox-grid";
 
-const ContactButton = styled.button`
-  background-color: #f05352;
-`;
+import sponsor from "./../../documents/BostonHacks_Sponsorship_V3.pdf";
 
 const DocButton = styled.button`
-  background-color: #ef9b75;
+  background-color: #f05352;
 `;
 
 const Text = styled.div`
@@ -38,8 +35,6 @@ const Title = styled.h2`
 `;
 
 class SponsorBox extends Component {
-  handleClick = e => console.log("Sponsor button clicked!");
-
   render() {
     return (
       <Fragment>
@@ -48,15 +43,9 @@ class SponsorBox extends Component {
           We would love to have you on board. Contact us or check our sponsor
           document!
         </Text>
-        <Row>
-          <Col md={5} xs={5}>
-            <ContactButton onClick={this.handleClick}>Contact Us</ContactButton>
-          </Col>
-          <Col md={5} xs={5}>
-            <DocButton onClick={this.handleClick}> Sponsor Doc</DocButton>
-          </Col>
-          <Col md={2} xs={2} />
-        </Row>
+        <DocButton>
+          <a href={sponsor}>Learn more</a>
+        </DocButton>
       </Fragment>
     );
   }

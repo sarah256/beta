@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import axios from "axios";
 
 const FlashMessage = props => {
   return <p style={{ color: props.color }}> {props.text} </p>;
@@ -53,6 +54,9 @@ export class ContactFormBody extends Component {
   };
 
   handleClick = e => {
+    let btoa = function(str) {
+      return Buffer.from(str).toString("base64");
+    };
     e.preventDefault();
 
     let isValidEmail = this.state.email.match(
@@ -60,7 +64,27 @@ export class ContactFormBody extends Component {
     );
 
     if (isValidEmail && this.state.full_name && this.state.message) {
-      // TODO: SUBMIT THE FORM
+      // TODO: SUBMIT THE FORM, NOT YET WORKING
+      axios({
+        url:
+          "https://cors-anywhere.herokuapp.com/https://api.mailgun.net/v3/lists/testinglist@bostonhacks.io/members",
+        method: "post",
+        contentType: "application/json",
+        headers: {
+          Authorization:
+            "Basic " + btoa("api:" + process.env.REACT_APP_MAILGUN_API_KEY)
+        },
+        data: {
+          address: "phamquangnam148@gmail.com",
+          name: "Nam Pham",
+          vars: {},
+          subscribed: true,
+          upsert: true
+        }
+      }).then(function(res) {
+        console.log(res);
+      });
+
       this.clearInput();
       this.setState({
         flash: [["green", "Form submitted Successfully"]]
