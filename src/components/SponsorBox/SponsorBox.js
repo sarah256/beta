@@ -43,9 +43,9 @@ class SponsorBox extends Component {
           We would love to have you on board. Contact us or check our sponsor
           document!
         </Text>
-        <DocButton>
-          <a href={sponsor}>Learn more</a>
-        </DocButton>
+        <a href={sponsor}>
+          <DocButton>Learn more</DocButton>
+        </a>
       </Fragment>
     );
   }
