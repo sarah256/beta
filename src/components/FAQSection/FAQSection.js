@@ -159,7 +159,7 @@ class FAQSection extends Component {
                 <FAQEntryTitle>Who’s coming?</FAQEntryTitle>
                 <FAQAnswer>
                   <p>
-                    We expect 400 to 450 hackers from all over North America to
+                    We expect 450 to 500 hackers from all over North America to
                     attend BostonHacks.
                   </p>
                 </FAQAnswer>
