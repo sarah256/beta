@@ -5,6 +5,7 @@ import { Grid, Row, Col } from "react-flexbox-grid";
 import logoFooter from "../../assets/Logos/Logo-Small_footer.svg";
 import facebook from "../../assets/Logos/fb.svg";
 import twitter from "../../assets/Logos/Twitter.svg";
+import mlhCode from "../../documents/mlh-code-of-conduct.pdf";
 
 const Text = styled.div`
   font-family: "Roboto", sans-serif;
@@ -57,6 +58,12 @@ export class FooterBar extends Component {
                 <a href="https://twitter.com/boston_hacks">
                   <img src={twitter} />
                 </a>
+              </Col>
+
+              <Col style={Spacer}>
+                <Text>
+                  <a href={mlhCode}>MLH Code of Conduct</a>
+                </Text>
               </Col>
 
               <Col>
