@@ -5,12 +5,18 @@ import FacebookLogo from "../../assets/Logos/fb.svg";
 import TwitterLogo from "../../assets/Logos/Twitter.svg";
 import HamburgerImg from "../../assets/Logos/hamburger.svg";
 
+const MainContainer = styled.div`
+  color: white;
+  position: fixed;
+  width: 100vw;
+  z-index: 999997;
+`;
+
 const Container = styled.div`
   background-color: #5b5480;
   color: white;
   position: fixed;
   width: 100vw;
-  z-index: 999999;
 `;
 
 const Wrapper = styled.div`
@@ -33,7 +39,7 @@ const Wrapper = styled.div`
   }
 
   div.right {
-    margin-right: 60px;
+    margin-right: 20vw;
     display: flex;
     align-items: center;
     a {
@@ -82,6 +88,19 @@ const MobileMenu = styled.div`
 
 const Spacer = styled.div`
   flex: 1;
+`;
+
+const MlhBadge = styled.div`
+  a {
+    display: block;
+    max-width: 100px;
+    min-width: 60px;
+    position: fixed;
+    right: 50px;
+    top: 0px;
+    width: 10%;
+    z-index: 10000;
+  }
 `;
 
 // const LinkContainer = styled.ul`
@@ -137,54 +156,71 @@ class Navbar extends Component {
 
   render() {
     return (
-      <Container>
-        <WrapperMobile>
-          <div className="left">
-            <a className="mainLogo" href="/">
-              <img src={Logo} />
-            </a>
-          </div>
-          <Spacer />
-          <div className="right">
-            <a className="hamburgerLink" onClick={this.toggleMobileMenu}>
-              <img src={HamburgerImg} />
-            </a>
-          </div>
-        </WrapperMobile>
-
+      <MainContainer>
         <Wrapper>
-          <div className="left">
-            <a className="mainLogo" href="/">
-              <img src={Logo} />
+          <MlhBadge>
+            <a
+              id="mlh-trust-badge"
+              href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=gray"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-gray.svg"
+                alt="Major League Hacking 2019 Hackathon Season"
+              />
             </a>
-          </div>
-
-          <Spacer />
-
-          <div className="right">
-            <a href="https://www.facebook.com/bostonhacks/">
-              <img src={FacebookLogo} />
-            </a>
-            <a href="https://twitter.com/boston_hacks">
-              <img src={TwitterLogo} />
-            </a>
-            <a href="https://museum.bostonhacks.io/">History</a>
-          </div>
+          </MlhBadge>
         </Wrapper>
+        <Container>
+          <WrapperMobile>
+            <div className="left">
+              <a className="mainLogo" href="/">
+                <img src={Logo} />
+              </a>
+            </div>
+            <Spacer />
+            <div className="right">
+              <a className="hamburgerLink" onClick={this.toggleMobileMenu}>
+                <img src={HamburgerImg} />
+              </a>
+            </div>
+          </WrapperMobile>
 
-        <MobileMenu id="mobileMenu">
-          <br />
-          <a href="https://www.facebook.com/bostonhacks"> Facebook </a>
-          <br />
-          <br />
-          <a href="https://twitter.com/boston_hacks"> Twitter </a>
-          <br />
-          <br />
-          <a href="https://museum.bostonhacks.io/"> History </a>
-          <br />
-          &nbsp;
-        </MobileMenu>
-      </Container>
+          <Wrapper>
+            <div className="left">
+              <a className="mainLogo" href="/">
+                <img src={Logo} />
+              </a>
+            </div>
+
+            <Spacer />
+
+            <div className="right">
+              <a href="https://www.facebook.com/bostonhacks/">
+                <img src={FacebookLogo} />
+              </a>
+              <a href="https://twitter.com/boston_hacks">
+                <img src={TwitterLogo} />
+              </a>
+              <a href="https://museum.bostonhacks.io/">History</a>
+            </div>
+          </Wrapper>
+
+          <MobileMenu id="mobileMenu">
+            <br />
+            <a href="https://www.facebook.com/bostonhacks"> Facebook </a>
+            <br />
+            <br />
+            <a href="https://twitter.com/boston_hacks"> Twitter </a>
+            <br />
+            <br />
+            <a href="https://museum.bostonhacks.io/"> History </a>
+            <br />
+            &nbsp;
+          </MobileMenu>
+        </Container>
+      </MainContainer>
     );
   }
 }
