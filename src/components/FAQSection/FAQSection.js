@@ -30,8 +30,8 @@ const FAQHeader = FAQEntryTitle.extend`
 `;
 
 const FAQHeaderCopy = FAQEntryTitle.extend`
-  font-size: 1.4em;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 400;
   color: #000000;
   font-family: "Roboto Slab", serif;
   max-width: 65%;
@@ -140,7 +140,14 @@ class FAQSection extends Component {
                 <FAQHeader> Frequently Asked Questions </FAQHeader>
                 <FAQHeaderCopy>
                   The event is still a ways away, so check back closer to the
-                  hackathon for more information.
+                  hackathon for more information. If you don&#39;t find your
+                  question, email us at&nbsp;
+                  <a
+                    href="mailto:contact@bostonhacks.io"
+                    style={{ color: "#3bb9e3" }}
+                  >
+                    contact@bostonhacks.io
+                  </a>.
                 </FAQHeaderCopy>
               </Col>
             </Row>

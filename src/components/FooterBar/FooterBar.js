@@ -28,10 +28,13 @@ const Align = styled.div`
   align-items: center;
   width: 100%;
   text-transform: uppercase;
+  @media (max-width: 500px) {
+    align-items: baseline;
+  }
 `;
 
 const Spacer = {
-  marginRight: "5vh"
+  marginRight: "3vh"
 };
 
 export class FooterBar extends Component {
@@ -44,13 +47,13 @@ export class FooterBar extends Component {
               <Col style={Spacer}>
                 <img src={logoFooter} style={{ height: "1.6em" }} />
               </Col>
-              <Col style={Spacer}>
+              <Col style={Spacer} className="hidden-xs">
                 <a href="https://www.facebook.com/bostonhacks/">
                   <img src={facebook} />
                 </a>
               </Col>
 
-              <Col style={Spacer}>
+              <Col style={Spacer} className="hidden-xs">
                 <a href="https://twitter.com/boston_hacks">
                   <img src={twitter} />
                 </a>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Logo from "../../assets/Logos/Logo-Small_header.svg";
+import Logo from "../../assets/Logos/Logo_Small_header.svg";
 import FacebookLogo from "../../assets/Logos/fb.svg";
 import TwitterLogo from "../../assets/Logos/Twitter.svg";
 import HamburgerImg from "../../assets/Logos/hamburger.svg";
@@ -28,6 +28,7 @@ const Wrapper = styled.div`
   div.left {
     a.mainLogo {
       margin: 10px 60px 10px 60px;
+      width: 170px;
     }
   }
 
@@ -58,6 +59,7 @@ const WrapperMobile = styled.div`
   div.left {
     a.mainLogo {
       margin: 10px 30px 10px 30px;
+      width: 120px;
     }
   }
 
